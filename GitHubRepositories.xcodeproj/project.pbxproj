@@ -42,6 +42,7 @@
 		5772ED932583A9C80080AFEE /* CustomeNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772ED922583A9C80080AFEE /* CustomeNavigationController.swift */; };
 		5772ED952583ADFB0080AFEE /* MainNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772ED942583ADFB0080AFEE /* MainNavigator.swift */; };
 		5772ED972583B4410080AFEE /* TableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772ED962583B4410080AFEE /* TableViewExtension.swift */; };
+		5772ED9A2583C6F10080AFEE /* LocalRepositoriesRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772ED992583C6F10080AFEE /* LocalRepositoriesRepo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +83,7 @@
 		5772ED922583A9C80080AFEE /* CustomeNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomeNavigationController.swift; sourceTree = "<group>"; };
 		5772ED942583ADFB0080AFEE /* MainNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigator.swift; sourceTree = "<group>"; };
 		5772ED962583B4410080AFEE /* TableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewExtension.swift; sourceTree = "<group>"; };
+		5772ED992583C6F10080AFEE /* LocalRepositoriesRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalRepositoriesRepo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,11 +203,11 @@
 		5772ED5C258299F70080AFEE /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				5772ED982583C4ED0080AFEE /* Repo */,
 				5772ED6C2583837B0080AFEE /* TableViewCells */,
 				5772ED5F25829A5F0080AFEE /* RepositoriesViewController.swift */,
 				5772ED73258383DD0080AFEE /* RepositoriesView.swift */,
 				5772ED6325829ACB0080AFEE /* RepositoriesViewModel.swift */,
-				5772ED6125829AB20080AFEE /* RepositoriesRepo.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -264,6 +266,15 @@
 				5772ED8D25839F100080AFEE /* RepositoryNavigatorFactory.swift */,
 			);
 			path = RepositoryNavigator;
+			sourceTree = "<group>";
+		};
+		5772ED982583C4ED0080AFEE /* Repo */ = {
+			isa = PBXGroup;
+			children = (
+				5772ED6125829AB20080AFEE /* RepositoriesRepo.swift */,
+				5772ED992583C6F10080AFEE /* LocalRepositoriesRepo.swift */,
+			);
+			path = Repo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -369,6 +380,7 @@
 				5772ED692582A60E0080AFEE /* ArrayExtension.swift in Sources */,
 				5772ED45258262CA0080AFEE /* Result.swift in Sources */,
 				5772ED43258262870080AFEE /* HTTPMethod.swift in Sources */,
+				5772ED9A2583C6F10080AFEE /* LocalRepositoriesRepo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

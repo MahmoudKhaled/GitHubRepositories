@@ -35,6 +35,7 @@ struct RepositoryResponse: Codable {
     let issuesURL, pullsURL, milestonesURL, notificationsURL: String?
     let labelsURL, releasesURL: String?
     let deploymentsURL: String?
+    let createdAt: String?
 
     enum CodingKeys: String, CodingKey {
         case id
@@ -82,6 +83,7 @@ struct RepositoryResponse: Codable {
         case labelsURL = "labels_url"
         case releasesURL = "releases_url"
         case deploymentsURL = "deployments_url"
+        case createdAt = "created_at"
     }
 }
 

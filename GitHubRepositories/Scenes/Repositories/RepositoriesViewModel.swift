@@ -13,6 +13,7 @@ protocol RepositoriesViewModelProtocol {
     var numberOfRepositoriesRows: Int { get }
     func getReposotries()
     func getRepositoryItem(at indexPath: IndexPath) -> Repository
+    func searchByRepositoryName(name: String)
 }
 
 final class RepositoriesViewModel {
@@ -42,11 +43,19 @@ extension RepositoriesViewModel: RepositoriesViewModelProtocol {
     func getRepositoryItem(at indexPath: IndexPath) -> Repository {
         return repositories.value[indexPath.row]
     }
+    
+    func searchByRepositoryName(name: String) {
+        repo.search(for: name)
+    }
 }
 
 extension RepositoriesViewModel: RepositoriesRepoDelegate {
     func didGetPublicRepositories(repositories: [Repository]) {
         self.repositories.value.append(contentsOf: repositories)
+    }
+    
+    func didGetSearchedItmes(repositories: [Repository]) {
+        self.repositories.value = repositories
     }
     
     func showError(error: Error?) {

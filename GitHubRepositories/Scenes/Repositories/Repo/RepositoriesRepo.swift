@@ -15,15 +15,18 @@ protocol ErrorStatusProtocol: class {
 protocol RepositoriesRepoProtocol: class {
     var delegate: RepositoriesRepoDelegate? { get set }
     func getPublicRepositories()
+    func search(for reposiotryName: String)
 }
 
 protocol RepositoriesRepoDelegate: ErrorStatusProtocol {
     func didGetPublicRepositories(repositories: [Repository])
+    func didGetSearchedItmes(repositories: [Repository])
 }
 
 final class RepositoriesRepo: RepositoriesRepoProtocol {
     
     var delegate: RepositoriesRepoDelegate?
+    private var localrepo: LocalRepositoriesRepoProtocol?
     
     // get all public repositories
     func getPublicRepositories() {
@@ -34,10 +37,17 @@ final class RepositoriesRepo: RepositoriesRepoProtocol {
             case .success(let repositoriesResponse):
                 let reposioties = repositoriesResponse.map({Repository($0)})
                 self.delegate?.didGetPublicRepositories(repositories: reposioties)
-                
+                self.localrepo = LocalRepositoriesRepo(reposioties)
             case .failure(let error):
                 self.delegate?.showError(error: error)
             }
         }
     }
+    
+    func search(for reposiotryName: String) {
+        let searchedItems = localrepo?.search(for: reposiotryName)
+        delegate?.didGetSearchedItmes(repositories: searchedItems ?? [])
+    }
 }
+
+

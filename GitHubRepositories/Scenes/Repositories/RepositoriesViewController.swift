@@ -20,7 +20,8 @@ class RepositoriesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupTableView()
+        setlistAdapter()
+        setSearchAdapter()
         setupUI()
     }
     
@@ -36,7 +37,7 @@ class RepositoriesViewController: UIViewController {
 
 extension RepositoriesViewController: UITableViewDataSource, UITableViewDelegate {
     
-    private func setupTableView() {
+    private func setlistAdapter() {
         mainView.repositoriesTableView.dataSource = self
         mainView.repositoriesTableView.delegate = self
     }
@@ -54,4 +55,16 @@ extension RepositoriesViewController: UITableViewDataSource, UITableViewDelegate
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 85
     }
+}
+
+extension RepositoriesViewController: UISearchBarDelegate {
+    
+    func setSearchAdapter() {
+        mainView.searchBar.delegate = self
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        viewModel?.searchByRepositoryName(name: searchText)
+    }
+    
 }
