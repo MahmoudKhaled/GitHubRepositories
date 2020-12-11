@@ -11,6 +11,9 @@ import Foundation
 struct EnpointConstants {
     
     static let baseUrl = "https://api.github.com/"
+    
+    //MARK:- Repositories endpoints
+    static let publicRepository = "repositories"
 }
 
 

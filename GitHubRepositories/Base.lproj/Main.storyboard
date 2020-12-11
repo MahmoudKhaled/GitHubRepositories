@@ -1,24 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Repositories View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController storyboardIdentifier="RepositoriesViewController" id="BYZ-38-t0r" customClass="RepositoriesViewController" customModule="GitHubRepositories" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="RepositoriesView" customModule="GitHubRepositories" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="7aZ-b6-P85">
+                                <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Y30-p0-dwK">
+                                <rect key="frame" x="0.0" y="100" width="414" height="762"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="7aZ-b6-P85" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="5g0-v0-12w"/>
+                            <constraint firstItem="Y30-p0-dwK" firstAttribute="top" secondItem="7aZ-b6-P85" secondAttribute="bottom" id="83s-gS-ZFq"/>
+                            <constraint firstItem="Y30-p0-dwK" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="FwH-k7-83U"/>
+                            <constraint firstItem="7aZ-b6-P85" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Ldk-xI-dvd"/>
+                            <constraint firstItem="Y30-p0-dwK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Mjp-NB-1EC"/>
+                            <constraint firstItem="Y30-p0-dwK" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="udC-G4-cug"/>
+                            <constraint firstItem="7aZ-b6-P85" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wPi-VK-dGC"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outlet property="repositoriesTableView" destination="Y30-p0-dwK" id="31j-B0-DnE"/>
+                            <outlet property="searchBar" destination="7aZ-b6-P85" id="5hG-Rl-TwB"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="mainView" destination="8bC-Xf-vdC" id="RaH-aP-FYL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="86.383928571428569"/>
         </scene>
     </scenes>
 </document>
