@@ -1,5 +1,5 @@
 //
-//  ImageViewExtenstions.swift
+//  ImageViewExtenstion.swift
 //  GitHubRepositories
 //
 //  Created by Mahmoud Khaled on 12/11/20.
@@ -27,5 +27,22 @@ extension UIImageView {
             return
         }
         self.setImage(forURL: _url)
+    }
+    
+    
+}
+
+extension UIImageView {
+    func load(url: URL?) {
+        guard let url = url else { return }
+        DispatchQueue.global().async { [weak self] in
+            if let data = try? Data(contentsOf: url) {
+                if let image = UIImage(data: data) {
+                    DispatchQueue.main.async {
+                        self?.image = image
+                    }
+                }
+            }
+        }
     }
 }

@@ -32,9 +32,16 @@
 		5772ED7A258389E60080AFEE /* Cellabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772ED79258389E60080AFEE /* Cellabel.swift */; };
 		5772ED7D25838BFD0080AFEE /* RepositoryApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772ED7C25838BFD0080AFEE /* RepositoryApi.swift */; };
 		5772ED7F25838CF10080AFEE /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772ED7E25838CF10080AFEE /* ImageDownloader.swift */; };
-		5772ED8125838D2B0080AFEE /* ImageViewExtenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772ED8025838D2B0080AFEE /* ImageViewExtenstions.swift */; };
+		5772ED8125838D2B0080AFEE /* ImageViewExtenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772ED8025838D2B0080AFEE /* ImageViewExtenstion.swift */; };
 		5772ED8325838E8C0080AFEE /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772ED8225838E8C0080AFEE /* Repository.swift */; };
 		5772ED8525838EF70080AFEE /* RepositoryOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772ED8425838EF70080AFEE /* RepositoryOwner.swift */; };
+		5772ED8825839AE20080AFEE /* ViewControllerExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772ED8725839AE20080AFEE /* ViewControllerExtention.swift */; };
+		5772ED8A25839CFF0080AFEE /* BaseNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772ED8925839CFF0080AFEE /* BaseNavigator.swift */; };
+		5772ED8C25839EB10080AFEE /* RepositoryNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772ED8B25839EB10080AFEE /* RepositoryNavigator.swift */; };
+		5772ED8E25839F100080AFEE /* RepositoryNavigatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772ED8D25839F100080AFEE /* RepositoryNavigatorFactory.swift */; };
+		5772ED932583A9C80080AFEE /* CustomeNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772ED922583A9C80080AFEE /* CustomeNavigationController.swift */; };
+		5772ED952583ADFB0080AFEE /* MainNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772ED942583ADFB0080AFEE /* MainNavigator.swift */; };
+		5772ED972583B4410080AFEE /* TableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772ED962583B4410080AFEE /* TableViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,9 +72,16 @@
 		5772ED79258389E60080AFEE /* Cellabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cellabel.swift; sourceTree = "<group>"; };
 		5772ED7C25838BFD0080AFEE /* RepositoryApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryApi.swift; sourceTree = "<group>"; };
 		5772ED7E25838CF10080AFEE /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
-		5772ED8025838D2B0080AFEE /* ImageViewExtenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewExtenstions.swift; sourceTree = "<group>"; };
+		5772ED8025838D2B0080AFEE /* ImageViewExtenstion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewExtenstion.swift; sourceTree = "<group>"; };
 		5772ED8225838E8C0080AFEE /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		5772ED8425838EF70080AFEE /* RepositoryOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryOwner.swift; sourceTree = "<group>"; };
+		5772ED8725839AE20080AFEE /* ViewControllerExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtention.swift; sourceTree = "<group>"; };
+		5772ED8925839CFF0080AFEE /* BaseNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigator.swift; sourceTree = "<group>"; };
+		5772ED8B25839EB10080AFEE /* RepositoryNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryNavigator.swift; sourceTree = "<group>"; };
+		5772ED8D25839F100080AFEE /* RepositoryNavigatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryNavigatorFactory.swift; sourceTree = "<group>"; };
+		5772ED922583A9C80080AFEE /* CustomeNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomeNavigationController.swift; sourceTree = "<group>"; };
+		5772ED942583ADFB0080AFEE /* MainNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigator.swift; sourceTree = "<group>"; };
+		5772ED962583B4410080AFEE /* TableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +114,7 @@
 		5772ED27258260170080AFEE /* GitHubRepositories */ = {
 			isa = PBXGroup;
 			children = (
+				5772ED86258397910080AFEE /* Navigator */,
 				5772ED3F258261640080AFEE /* Scenes */,
 				5772ED672582A5EF0080AFEE /* Extentions */,
 				5772ED502582761E0080AFEE /* Utilities */,
@@ -168,6 +183,7 @@
 				5772ED4E258275310080AFEE /* EnpointConstants.swift */,
 				5772ED5D25829A230080AFEE /* Boxing.swift */,
 				5772ED7E25838CF10080AFEE /* ImageDownloader.swift */,
+				5772ED922583A9C80080AFEE /* CustomeNavigationController.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -199,7 +215,9 @@
 			children = (
 				5772ED682582A60E0080AFEE /* ArrayExtension.swift */,
 				5772ED79258389E60080AFEE /* Cellabel.swift */,
-				5772ED8025838D2B0080AFEE /* ImageViewExtenstions.swift */,
+				5772ED8025838D2B0080AFEE /* ImageViewExtenstion.swift */,
+				5772ED8725839AE20080AFEE /* ViewControllerExtention.swift */,
+				5772ED962583B4410080AFEE /* TableViewExtension.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -227,6 +245,25 @@
 				5772ED7C25838BFD0080AFEE /* RepositoryApi.swift */,
 			);
 			path = Api;
+			sourceTree = "<group>";
+		};
+		5772ED86258397910080AFEE /* Navigator */ = {
+			isa = PBXGroup;
+			children = (
+				5772ED8F2583A24E0080AFEE /* RepositoryNavigator */,
+				5772ED8925839CFF0080AFEE /* BaseNavigator.swift */,
+				5772ED942583ADFB0080AFEE /* MainNavigator.swift */,
+			);
+			path = Navigator;
+			sourceTree = "<group>";
+		};
+		5772ED8F2583A24E0080AFEE /* RepositoryNavigator */ = {
+			isa = PBXGroup;
+			children = (
+				5772ED8B25839EB10080AFEE /* RepositoryNavigator.swift */,
+				5772ED8D25839F100080AFEE /* RepositoryNavigatorFactory.swift */,
+			);
+			path = RepositoryNavigator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,23 +340,30 @@
 			files = (
 				5772ED522582767E0080AFEE /* RequestProtocol.swift in Sources */,
 				5772ED7A258389E60080AFEE /* Cellabel.swift in Sources */,
+				5772ED972583B4410080AFEE /* TableViewExtension.swift in Sources */,
 				5772ED4C258272AF0080AFEE /* RequestBuilder.swift in Sources */,
 				5772ED6B2582B27C0080AFEE /* Test.swift in Sources */,
 				5772ED4F258275310080AFEE /* EnpointConstants.swift in Sources */,
 				5772ED6225829AB20080AFEE /* RepositoriesRepo.swift in Sources */,
 				5772ED6025829A5F0080AFEE /* RepositoriesViewController.swift in Sources */,
+				5772ED8C25839EB10080AFEE /* RepositoryNavigator.swift in Sources */,
 				5772ED472582636E0080AFEE /* ResultError.swift in Sources */,
 				5772ED7D25838BFD0080AFEE /* RepositoryApi.swift in Sources */,
 				5772ED8325838E8C0080AFEE /* Repository.swift in Sources */,
+				5772ED8825839AE20080AFEE /* ViewControllerExtention.swift in Sources */,
+				5772ED8E25839F100080AFEE /* RepositoryNavigatorFactory.swift in Sources */,
 				5772ED78258385A50080AFEE /* BaseImageView.swift in Sources */,
 				5772ED54258278C80080AFEE /* RequestParsing.swift in Sources */,
 				5772ED6625829AED0080AFEE /* RepositryResponse.swift in Sources */,
 				5772ED6425829ACB0080AFEE /* RepositoriesViewModel.swift in Sources */,
 				5772ED29258260170080AFEE /* AppDelegate.swift in Sources */,
+				5772ED8A25839CFF0080AFEE /* BaseNavigator.swift in Sources */,
 				5772ED71258383BF0080AFEE /* RepositoryTableViewCell.swift in Sources */,
+				5772ED932583A9C80080AFEE /* CustomeNavigationController.swift in Sources */,
 				5772ED5E25829A230080AFEE /* Boxing.swift in Sources */,
+				5772ED952583ADFB0080AFEE /* MainNavigator.swift in Sources */,
 				5772ED7F25838CF10080AFEE /* ImageDownloader.swift in Sources */,
-				5772ED8125838D2B0080AFEE /* ImageViewExtenstions.swift in Sources */,
+				5772ED8125838D2B0080AFEE /* ImageViewExtenstion.swift in Sources */,
 				5772ED8525838EF70080AFEE /* RepositoryOwner.swift in Sources */,
 				5772ED74258383DD0080AFEE /* RepositoriesView.swift in Sources */,
 				5772ED692582A60E0080AFEE /* ArrayExtension.swift in Sources */,

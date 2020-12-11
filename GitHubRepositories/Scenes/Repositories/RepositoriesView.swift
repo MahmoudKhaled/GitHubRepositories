@@ -18,6 +18,7 @@ class RepositoriesView: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         registerRespositoryCell()
+        repositoriesTableView.tableFooterView = UIView()
     }
     
     private func registerRespositoryCell() {

@@ -16,6 +16,15 @@ class RepositoryTableViewCell: UITableViewCell {
     @IBOutlet weak var repositoryOwnerNameLabel: UILabel!
     @IBOutlet weak var createdAtLabel: UILabel!
     
+    var repository: Repository? {
+        didSet {
+            guard let repository = repository else { return }
+//            repositoryImageView.setImage(forURL: repository.owner.avatarImage)
+            repositoryImageView.load(url: repository.owner.avatarImage)
+            repositoryNameLabel.text = repository.name
+            repositoryOwnerNameLabel.text = repository.owner.name
+        }
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()
