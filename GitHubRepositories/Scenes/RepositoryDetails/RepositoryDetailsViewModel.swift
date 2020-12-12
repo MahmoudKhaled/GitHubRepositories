@@ -7,7 +7,7 @@
 //
 
 import Foundation
-protocol RepositoryDetailsViewModelProtocol {
+protocol RepositoryDetailsViewModelProtocol: BaseViewModelProtocol {
     var detailsData: Boxing<[RepositoryDetails]> { get set }
     var repository: Boxing<Repository> { get set }
     var numberOFDetailsDataRows: Int { get }
@@ -15,7 +15,7 @@ protocol RepositoryDetailsViewModelProtocol {
     func getDetails()
 }
 
-final class RepositoryDetailsViewModel {
+final class RepositoryDetailsViewModel: BaseViewModel {
     
     var detailsData: Boxing<[RepositoryDetails]> = Boxing([])
     var repository: Boxing<Repository> = Boxing(Repository(nil))
@@ -29,6 +29,7 @@ final class RepositoryDetailsViewModel {
     init(repositoryFullName: String, repo: RepositoryDetailsRepoProtocol) {
         self.repositoryFullName = repositoryFullName
         self.repo = repo
+        super.init()
         self.repo.delegate = self
     }
 }
@@ -51,9 +52,9 @@ extension RepositoryDetailsViewModel: RepositoryDetailsRepoDelegate {
         detailsData.value = repositoryDetails.detailsData
     }
     
-    func showError(error: Error?) {
-        
-    }
+//    func showError(error: Error?) {
+//        
+//    }
     
     
 }

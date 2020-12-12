@@ -8,7 +8,18 @@
 
 import UIKit
 
+extension RepositoriesViewController {
+    static func create() -> UIViewController {
+        let vc = self.instance(.main)
+        let viewModel = RepositoriesViewModel(repo: RepositoriesRepo(), navigator: RepositoryNavigator(vc))
+        vc.setViewModel(viewModel)
+        vc.title = ScreenTitle.publicRepositories.title
+        return vc
+    }
+}
+
 class RepositoriesViewController: UIViewController {
+    
     //MARK:- Outlet of mainView
     @IBOutlet var mainView: RepositoriesView!
     
@@ -31,6 +42,14 @@ class RepositoriesViewController: UIViewController {
         viewModel?.repositories.binding { [weak self] repositories in
             guard let self = self else { return }
             self.mainView.repositoriesTableView.reloadTableView()
+        }
+        
+        viewModel?.errorMessage.binding { [weak self] message in
+            guard let self = self else { return }
+            DispatchQueue.main.async {
+                self.showErrorAlert(with: message)
+            }
+            
         }
     }
 }

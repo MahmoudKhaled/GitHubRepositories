@@ -11,12 +11,6 @@ class CustomNavigationController: UINavigationController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-        navigationBar.titleTextAttributes = [
-            .foregroundColor: UIColor.black,
-            .font: UIFont()
-        ]
-        
         navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationBar.shadowImage = UIImage()
         navigationBar.isTranslucent = false

@@ -13,13 +13,9 @@ import UIKit
 
 public class BaseNavigator {
     
-    private  var  navigationController: UINavigationController?  {
-        return controller.navigationController
-    }
-    
-    let controller: UIViewController
-    
+    var  controller: UIViewController
     init(_ controller: UIViewController) {
         self.controller = controller
     }
+   
 }

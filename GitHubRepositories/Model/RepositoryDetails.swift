@@ -27,11 +27,11 @@ enum RepositoryDetailsData {
     
     var titleValue: String {
         switch self {
-        case .issues: return NSLocalizedString("Issues", comment: "")
-        case .subscriber: return NSLocalizedString("Subscribers", comment: "")
-        case .watchers: return NSLocalizedString("Watchers", comment: "")
-        case .language: return NSLocalizedString("Language", comment: "")
-        case .fork: return NSLocalizedString("Forks", comment: "")
+        case .issues: return "Issues".localized()
+        case .subscriber: return "Subscribers".localized()
+        case .watchers: return "Watchers".localized()
+        case .language: return "Language".localized()
+        case .fork: return "Forks".localized()
         }
     }
 }

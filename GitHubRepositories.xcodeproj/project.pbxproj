@@ -40,7 +40,7 @@
 		5772ED8C25839EB10080AFEE /* RepositoryNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772ED8B25839EB10080AFEE /* RepositoryNavigator.swift */; };
 		5772ED8E25839F100080AFEE /* RepositoryNavigatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772ED8D25839F100080AFEE /* RepositoryNavigatorFactory.swift */; };
 		5772ED932583A9C80080AFEE /* CustomeNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772ED922583A9C80080AFEE /* CustomeNavigationController.swift */; };
-		5772ED952583ADFB0080AFEE /* MainNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772ED942583ADFB0080AFEE /* MainNavigator.swift */; };
+		5772ED952583ADFB0080AFEE /* AppNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772ED942583ADFB0080AFEE /* AppNavigator.swift */; };
 		5772ED972583B4410080AFEE /* TableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772ED962583B4410080AFEE /* TableViewExtension.swift */; };
 		5772ED9A2583C6F10080AFEE /* LocalRepositoriesRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772ED992583C6F10080AFEE /* LocalRepositoriesRepo.swift */; };
 		5772ED9C2583E0410080AFEE /* RepositoriesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772ED9B2583E0410080AFEE /* RepositoriesData.swift */; };
@@ -51,6 +51,10 @@
 		5772EDAB2585195E0080AFEE /* RepositoryDetailsTableViewCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772EDA92585195E0080AFEE /* RepositoryDetailsTableViewCellTableViewCell.swift */; };
 		5772EDAC2585195E0080AFEE /* RepositoryDetailsTableViewCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5772EDAA2585195E0080AFEE /* RepositoryDetailsTableViewCellTableViewCell.xib */; };
 		5772EDAE25851C2F0080AFEE /* RepositoryDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772EDAD25851C2F0080AFEE /* RepositoryDetails.swift */; };
+		5772EDB125857CF90080AFEE /* ScreenTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772EDB025857CF90080AFEE /* ScreenTitle.swift */; };
+		5772EDB3258581820080AFEE /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772EDB2258581820080AFEE /* StringExtension.swift */; };
+		5772EDB52585826C0080AFEE /* AlertBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772EDB42585826C0080AFEE /* AlertBuilder.swift */; };
+		5772EDB72585839A0080AFEE /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772EDB62585839A0080AFEE /* BaseViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,7 +93,7 @@
 		5772ED8B25839EB10080AFEE /* RepositoryNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryNavigator.swift; sourceTree = "<group>"; };
 		5772ED8D25839F100080AFEE /* RepositoryNavigatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryNavigatorFactory.swift; sourceTree = "<group>"; };
 		5772ED922583A9C80080AFEE /* CustomeNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomeNavigationController.swift; sourceTree = "<group>"; };
-		5772ED942583ADFB0080AFEE /* MainNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigator.swift; sourceTree = "<group>"; };
+		5772ED942583ADFB0080AFEE /* AppNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigator.swift; sourceTree = "<group>"; };
 		5772ED962583B4410080AFEE /* TableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewExtension.swift; sourceTree = "<group>"; };
 		5772ED992583C6F10080AFEE /* LocalRepositoriesRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalRepositoriesRepo.swift; sourceTree = "<group>"; };
 		5772ED9B2583E0410080AFEE /* RepositoriesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesData.swift; sourceTree = "<group>"; };
@@ -100,6 +104,10 @@
 		5772EDA92585195E0080AFEE /* RepositoryDetailsTableViewCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailsTableViewCellTableViewCell.swift; sourceTree = "<group>"; };
 		5772EDAA2585195E0080AFEE /* RepositoryDetailsTableViewCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryDetailsTableViewCellTableViewCell.xib; sourceTree = "<group>"; };
 		5772EDAD25851C2F0080AFEE /* RepositoryDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetails.swift; sourceTree = "<group>"; };
+		5772EDB025857CF90080AFEE /* ScreenTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTitle.swift; sourceTree = "<group>"; };
+		5772EDB2258581820080AFEE /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		5772EDB42585826C0080AFEE /* AlertBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertBuilder.swift; sourceTree = "<group>"; };
+		5772EDB62585839A0080AFEE /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +143,7 @@
 				5772ED86258397910080AFEE /* Navigator */,
 				5772ED3F258261640080AFEE /* Scenes */,
 				5772ED672582A5EF0080AFEE /* Extentions */,
+				5772EDAF25857CE90080AFEE /* Enums */,
 				5772ED502582761E0080AFEE /* Utilities */,
 				5772ED41258261A60080AFEE /* NetworkLayer */,
 				5772ED572582983E0080AFEE /* Model */,
@@ -169,6 +178,7 @@
 				5772ED9D258512700080AFEE /* RepositoryDetails */,
 				5772ED5C258299F70080AFEE /* Repositories */,
 				5772ED6A2582B27C0080AFEE /* Test.swift */,
+				5772EDB62585839A0080AFEE /* BaseViewModel.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -203,6 +213,7 @@
 				5772ED5D25829A230080AFEE /* Boxing.swift */,
 				5772ED7E25838CF10080AFEE /* ImageDownloader.swift */,
 				5772ED922583A9C80080AFEE /* CustomeNavigationController.swift */,
+				5772EDB42585826C0080AFEE /* AlertBuilder.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -239,6 +250,7 @@
 				5772ED8025838D2B0080AFEE /* ImageViewExtenstion.swift */,
 				5772ED8725839AE20080AFEE /* ViewControllerExtention.swift */,
 				5772ED962583B4410080AFEE /* TableViewExtension.swift */,
+				5772EDB2258581820080AFEE /* StringExtension.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -273,7 +285,7 @@
 			children = (
 				5772ED8F2583A24E0080AFEE /* RepositoryNavigator */,
 				5772ED8925839CFF0080AFEE /* BaseNavigator.swift */,
-				5772ED942583ADFB0080AFEE /* MainNavigator.swift */,
+				5772ED942583ADFB0080AFEE /* AppNavigator.swift */,
 			);
 			path = Navigator;
 			sourceTree = "<group>";
@@ -315,6 +327,14 @@
 				5772EDAA2585195E0080AFEE /* RepositoryDetailsTableViewCellTableViewCell.xib */,
 			);
 			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		5772EDAF25857CE90080AFEE /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				5772EDB025857CF90080AFEE /* ScreenTitle.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -395,6 +415,7 @@
 				5772ED972583B4410080AFEE /* TableViewExtension.swift in Sources */,
 				5772ED4C258272AF0080AFEE /* RequestBuilder.swift in Sources */,
 				5772ED6B2582B27C0080AFEE /* Test.swift in Sources */,
+				5772EDB72585839A0080AFEE /* BaseViewModel.swift in Sources */,
 				5772ED4F258275310080AFEE /* EnpointConstants.swift in Sources */,
 				5772ED6225829AB20080AFEE /* RepositoriesRepo.swift in Sources */,
 				5772EDA1258512B50080AFEE /* RepositoryDetailsViewModel.swift in Sources */,
@@ -402,6 +423,7 @@
 				5772ED8C25839EB10080AFEE /* RepositoryNavigator.swift in Sources */,
 				5772ED472582636E0080AFEE /* ResultError.swift in Sources */,
 				5772ED7D25838BFD0080AFEE /* RepositoryApi.swift in Sources */,
+				5772EDB52585826C0080AFEE /* AlertBuilder.swift in Sources */,
 				5772ED9F258512900080AFEE /* RepositoryDetailsViewController.swift in Sources */,
 				5772ED8325838E8C0080AFEE /* Repository.swift in Sources */,
 				5772ED8825839AE20080AFEE /* ViewControllerExtention.swift in Sources */,
@@ -415,17 +437,19 @@
 				5772ED71258383BF0080AFEE /* RepositoryTableViewCell.swift in Sources */,
 				5772ED932583A9C80080AFEE /* CustomeNavigationController.swift in Sources */,
 				5772ED5E25829A230080AFEE /* Boxing.swift in Sources */,
-				5772ED952583ADFB0080AFEE /* MainNavigator.swift in Sources */,
+				5772ED952583ADFB0080AFEE /* AppNavigator.swift in Sources */,
 				5772EDA52585182E0080AFEE /* RepositoryDetailsView.swift in Sources */,
 				5772EDA3258512C40080AFEE /* RepositoryDetailsRepo.swift in Sources */,
 				5772ED7F25838CF10080AFEE /* ImageDownloader.swift in Sources */,
 				5772ED8125838D2B0080AFEE /* ImageViewExtenstion.swift in Sources */,
+				5772EDB125857CF90080AFEE /* ScreenTitle.swift in Sources */,
 				5772ED8525838EF70080AFEE /* RepositoryOwner.swift in Sources */,
 				5772ED74258383DD0080AFEE /* RepositoriesView.swift in Sources */,
 				5772ED692582A60E0080AFEE /* ArrayExtension.swift in Sources */,
 				5772ED45258262CA0080AFEE /* Result.swift in Sources */,
 				5772ED43258262870080AFEE /* HTTPMethod.swift in Sources */,
 				5772EDAE25851C2F0080AFEE /* RepositoryDetails.swift in Sources */,
+				5772EDB3258581820080AFEE /* StringExtension.swift in Sources */,
 				5772ED9A2583C6F10080AFEE /* LocalRepositoriesRepo.swift in Sources */,
 				5772EDAB2585195E0080AFEE /* RepositoryDetailsTableViewCellTableViewCell.swift in Sources */,
 				5772ED9C2583E0410080AFEE /* RepositoriesData.swift in Sources */,

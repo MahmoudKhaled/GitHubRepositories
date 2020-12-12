@@ -6,7 +6,7 @@
 //  Copyright © 2020 Mahmoud Khaled. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 enum RepositoryDestination {
     case repositories
@@ -16,18 +16,18 @@ enum RepositoryDestination {
 protocol RepositoryNavigatorProtocol: class {
     func navigateTo(_ destination: RepositoryDestination)
 }
-
 final class RepositoryNavigator: BaseNavigator, RepositoryNavigatorProtocol {
     
     private lazy var factory = RepositoryNavigatorFactory(navigator: self)
-    
+
     func navigateTo(_ destination: RepositoryDestination) {
         switch destination {
             
-        case .repositories:
-            controller.push(factory.repositories())
+        case .repositories: break
+            
         case .repositoriesDetails(let fullName):
-            controller.push(factory.repositoryDetails(fullName: fullName))
+//            controller.push(factory.repositoryDetails(fullName: fullName))
+            controller.push(RepositoryDetailsViewController.create(fullName: fullName))
         }
     }
     

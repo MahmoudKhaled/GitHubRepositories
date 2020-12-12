@@ -8,8 +8,9 @@
 
 import Foundation
 
-protocol RepositoriesViewModelProtocol {
+protocol RepositoriesViewModelProtocol: BaseViewModelProtocol {
     var repositories: Boxing<[Repository]> { get set }
+    var errorMessage: Boxing<String> { get set }
     var numberOfRepositoriesRows: Int { get }
     func getReposotries()
     func getRepositoryItem(at indexPath: IndexPath) -> Repository
@@ -17,10 +18,10 @@ protocol RepositoriesViewModelProtocol {
     func didSelectRepository(at indexPath: IndexPath)
 }
 
-final class RepositoriesViewModel {
+final class RepositoriesViewModel: BaseViewModel {
     
     var repositories: Boxing<[Repository]> = Boxing([])
-    
+
     private var repo: RepositoriesRepoProtocol
     private var navigator: RepositoryNavigatorProtocol
     private var totalPages: Int = 1
@@ -29,6 +30,7 @@ final class RepositoriesViewModel {
     init(repo: RepositoriesRepoProtocol, navigator: RepositoryNavigatorProtocol) {
         self.repo = repo
         self.navigator = navigator
+        super.init()
         self.repo.delegate = self
     }
 }
@@ -66,9 +68,9 @@ extension RepositoriesViewModel: RepositoriesRepoDelegate {
         self.repositories.value = repositories
     }
     
-    func showError(error: Error?) {
-        
-    }
+//    func showError(error: Error?) {
+//        errorMessage.value = error?.localizedDescription ?? ""
+//    }
     
     func didGetRepositoriesData(data: RepositoriesData) {
         self.repositories.value.append(contentsOf: data.repositories)

@@ -12,6 +12,12 @@ public enum StoryBoardIdentifier: String {
     case main = "Main"
 }
 
+// MARK: - Naviagtion ID
+
+public enum NavigationNames: String {
+    case homeNav = "MainNav"
+}
+
 // MARK: - Instate
 
 extension UIViewController {
@@ -34,5 +40,20 @@ extension UIViewController {
     
     public func push(_ viewController: UIViewController) {
         navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    func showErrorAlert(with message: String) {
+        AlertBuilder(title: "", message: message, preferredStyle: .alert)
+            .addAction(title: NSLocalizedString("Ok", comment: ""), style: .default)
+            .build()
+            .show()
+    }
+}
+
+public extension UINavigationController
+{
+    class func instance(_ identifier: NavigationNames, forStoryboard storyboard: StoryBoardIdentifier = .main) -> UINavigationController {
+        return (UIStoryboard(name: storyboard.rawValue, bundle: nil).instantiateViewController(withIdentifier: identifier.rawValue)
+            ) as! UINavigationController
     }
 }
