@@ -10,12 +10,15 @@ import Foundation
 
 enum RepositoryApi: RequestBuilder, RequestProtocol {
     
-    case PublicRepositories
+    case publicRepositories
+    case repositoryDetails(String)
     
     var path: String {
         switch self {
-        case .PublicRepositories:
+        case .publicRepositories:
             return EnpointConstants.publicRepository
+        case .repositoryDetails(let fullName):
+            return "\(EnpointConstants.repoDetails)/\(fullName)"
         }
     }
     

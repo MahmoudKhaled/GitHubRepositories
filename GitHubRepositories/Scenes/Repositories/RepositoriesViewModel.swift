@@ -14,6 +14,7 @@ protocol RepositoriesViewModelProtocol {
     func getReposotries()
     func getRepositoryItem(at indexPath: IndexPath) -> Repository
     func searchByRepositoryName(name: String)
+    func didSelectRepository(at indexPath: IndexPath)
 }
 
 final class RepositoriesViewModel {
@@ -22,6 +23,8 @@ final class RepositoriesViewModel {
     
     private var repo: RepositoriesRepoProtocol
     private var navigator: RepositoryNavigatorProtocol
+    private var totalPages: Int = 1
+    private var currentPage: Int = 1
     
     init(repo: RepositoriesRepoProtocol, navigator: RepositoryNavigatorProtocol) {
         self.repo = repo
@@ -47,6 +50,11 @@ extension RepositoriesViewModel: RepositoriesViewModelProtocol {
     func searchByRepositoryName(name: String) {
         repo.search(for: name)
     }
+    
+    func didSelectRepository(at indexPath: IndexPath) {
+        let fullName = repositories.value[indexPath.row].fullName
+        navigator.navigateTo(.repositoriesDetails(fullName: fullName))
+    }
 }
 
 extension RepositoriesViewModel: RepositoriesRepoDelegate {
@@ -60,5 +68,11 @@ extension RepositoriesViewModel: RepositoriesRepoDelegate {
     
     func showError(error: Error?) {
         
+    }
+    
+    func didGetRepositoriesData(data: RepositoriesData) {
+        self.repositories.value.append(contentsOf: data.repositories)
+        self.totalPages = data.totalPages
+        self.currentPage = 1
     }
 }

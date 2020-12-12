@@ -43,6 +43,14 @@
 		5772ED952583ADFB0080AFEE /* MainNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772ED942583ADFB0080AFEE /* MainNavigator.swift */; };
 		5772ED972583B4410080AFEE /* TableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772ED962583B4410080AFEE /* TableViewExtension.swift */; };
 		5772ED9A2583C6F10080AFEE /* LocalRepositoriesRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772ED992583C6F10080AFEE /* LocalRepositoriesRepo.swift */; };
+		5772ED9C2583E0410080AFEE /* RepositoriesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772ED9B2583E0410080AFEE /* RepositoriesData.swift */; };
+		5772ED9F258512900080AFEE /* RepositoryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772ED9E258512900080AFEE /* RepositoryDetailsViewController.swift */; };
+		5772EDA1258512B50080AFEE /* RepositoryDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772EDA0258512B50080AFEE /* RepositoryDetailsViewModel.swift */; };
+		5772EDA3258512C40080AFEE /* RepositoryDetailsRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772EDA2258512C40080AFEE /* RepositoryDetailsRepo.swift */; };
+		5772EDA52585182E0080AFEE /* RepositoryDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772EDA42585182E0080AFEE /* RepositoryDetailsView.swift */; };
+		5772EDAB2585195E0080AFEE /* RepositoryDetailsTableViewCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772EDA92585195E0080AFEE /* RepositoryDetailsTableViewCellTableViewCell.swift */; };
+		5772EDAC2585195E0080AFEE /* RepositoryDetailsTableViewCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5772EDAA2585195E0080AFEE /* RepositoryDetailsTableViewCellTableViewCell.xib */; };
+		5772EDAE25851C2F0080AFEE /* RepositoryDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772EDAD25851C2F0080AFEE /* RepositoryDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +92,14 @@
 		5772ED942583ADFB0080AFEE /* MainNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigator.swift; sourceTree = "<group>"; };
 		5772ED962583B4410080AFEE /* TableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewExtension.swift; sourceTree = "<group>"; };
 		5772ED992583C6F10080AFEE /* LocalRepositoriesRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalRepositoriesRepo.swift; sourceTree = "<group>"; };
+		5772ED9B2583E0410080AFEE /* RepositoriesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesData.swift; sourceTree = "<group>"; };
+		5772ED9E258512900080AFEE /* RepositoryDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailsViewController.swift; sourceTree = "<group>"; };
+		5772EDA0258512B50080AFEE /* RepositoryDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailsViewModel.swift; sourceTree = "<group>"; };
+		5772EDA2258512C40080AFEE /* RepositoryDetailsRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailsRepo.swift; sourceTree = "<group>"; };
+		5772EDA42585182E0080AFEE /* RepositoryDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailsView.swift; sourceTree = "<group>"; };
+		5772EDA92585195E0080AFEE /* RepositoryDetailsTableViewCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailsTableViewCellTableViewCell.swift; sourceTree = "<group>"; };
+		5772EDAA2585195E0080AFEE /* RepositoryDetailsTableViewCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryDetailsTableViewCellTableViewCell.xib; sourceTree = "<group>"; };
+		5772EDAD25851C2F0080AFEE /* RepositoryDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetails.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +166,7 @@
 		5772ED3F258261640080AFEE /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				5772ED9D258512700080AFEE /* RepositoryDetails */,
 				5772ED5C258299F70080AFEE /* Repositories */,
 				5772ED6A2582B27C0080AFEE /* Test.swift */,
 			);
@@ -196,6 +213,8 @@
 				5772ED6525829AED0080AFEE /* RepositryResponse.swift */,
 				5772ED8225838E8C0080AFEE /* Repository.swift */,
 				5772ED8425838EF70080AFEE /* RepositoryOwner.swift */,
+				5772ED9B2583E0410080AFEE /* RepositoriesData.swift */,
+				5772EDAD25851C2F0080AFEE /* RepositoryDetails.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -277,6 +296,27 @@
 			path = Repo;
 			sourceTree = "<group>";
 		};
+		5772ED9D258512700080AFEE /* RepositoryDetails */ = {
+			isa = PBXGroup;
+			children = (
+				5772EDA62585191B0080AFEE /* TableViewCells */,
+				5772ED9E258512900080AFEE /* RepositoryDetailsViewController.swift */,
+				5772EDA42585182E0080AFEE /* RepositoryDetailsView.swift */,
+				5772EDA0258512B50080AFEE /* RepositoryDetailsViewModel.swift */,
+				5772EDA2258512C40080AFEE /* RepositoryDetailsRepo.swift */,
+			);
+			path = RepositoryDetails;
+			sourceTree = "<group>";
+		};
+		5772EDA62585191B0080AFEE /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				5772EDA92585195E0080AFEE /* RepositoryDetailsTableViewCellTableViewCell.swift */,
+				5772EDAA2585195E0080AFEE /* RepositoryDetailsTableViewCellTableViewCell.xib */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -338,6 +378,7 @@
 				5772ED352582601C0080AFEE /* LaunchScreen.storyboard in Resources */,
 				5772ED322582601C0080AFEE /* Assets.xcassets in Resources */,
 				5772ED30258260170080AFEE /* Main.storyboard in Resources */,
+				5772EDAC2585195E0080AFEE /* RepositoryDetailsTableViewCellTableViewCell.xib in Resources */,
 				5772ED72258383BF0080AFEE /* RepositoryTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -356,10 +397,12 @@
 				5772ED6B2582B27C0080AFEE /* Test.swift in Sources */,
 				5772ED4F258275310080AFEE /* EnpointConstants.swift in Sources */,
 				5772ED6225829AB20080AFEE /* RepositoriesRepo.swift in Sources */,
+				5772EDA1258512B50080AFEE /* RepositoryDetailsViewModel.swift in Sources */,
 				5772ED6025829A5F0080AFEE /* RepositoriesViewController.swift in Sources */,
 				5772ED8C25839EB10080AFEE /* RepositoryNavigator.swift in Sources */,
 				5772ED472582636E0080AFEE /* ResultError.swift in Sources */,
 				5772ED7D25838BFD0080AFEE /* RepositoryApi.swift in Sources */,
+				5772ED9F258512900080AFEE /* RepositoryDetailsViewController.swift in Sources */,
 				5772ED8325838E8C0080AFEE /* Repository.swift in Sources */,
 				5772ED8825839AE20080AFEE /* ViewControllerExtention.swift in Sources */,
 				5772ED8E25839F100080AFEE /* RepositoryNavigatorFactory.swift in Sources */,
@@ -373,6 +416,8 @@
 				5772ED932583A9C80080AFEE /* CustomeNavigationController.swift in Sources */,
 				5772ED5E25829A230080AFEE /* Boxing.swift in Sources */,
 				5772ED952583ADFB0080AFEE /* MainNavigator.swift in Sources */,
+				5772EDA52585182E0080AFEE /* RepositoryDetailsView.swift in Sources */,
+				5772EDA3258512C40080AFEE /* RepositoryDetailsRepo.swift in Sources */,
 				5772ED7F25838CF10080AFEE /* ImageDownloader.swift in Sources */,
 				5772ED8125838D2B0080AFEE /* ImageViewExtenstion.swift in Sources */,
 				5772ED8525838EF70080AFEE /* RepositoryOwner.swift in Sources */,
@@ -380,7 +425,10 @@
 				5772ED692582A60E0080AFEE /* ArrayExtension.swift in Sources */,
 				5772ED45258262CA0080AFEE /* Result.swift in Sources */,
 				5772ED43258262870080AFEE /* HTTPMethod.swift in Sources */,
+				5772EDAE25851C2F0080AFEE /* RepositoryDetails.swift in Sources */,
 				5772ED9A2583C6F10080AFEE /* LocalRepositoriesRepo.swift in Sources */,
+				5772EDAB2585195E0080AFEE /* RepositoryDetailsTableViewCellTableViewCell.swift in Sources */,
+				5772ED9C2583E0410080AFEE /* RepositoriesData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

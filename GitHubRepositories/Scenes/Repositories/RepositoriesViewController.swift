@@ -55,6 +55,10 @@ extension RepositoriesViewController: UITableViewDataSource, UITableViewDelegate
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 85
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel?.didSelectRepository(at: indexPath)
+    }
 }
 
 extension RepositoriesViewController: UISearchBarDelegate {
@@ -66,5 +70,4 @@ extension RepositoriesViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         viewModel?.searchByRepositoryName(name: searchText)
     }
-    
 }

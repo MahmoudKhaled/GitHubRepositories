@@ -21,6 +21,7 @@ protocol RepositoriesRepoProtocol: class {
 protocol RepositoriesRepoDelegate: ErrorStatusProtocol {
     func didGetPublicRepositories(repositories: [Repository])
     func didGetSearchedItmes(repositories: [Repository])
+    func didGetRepositoriesData(data: RepositoriesData)
 }
 
 final class RepositoriesRepo: RepositoriesRepoProtocol {
@@ -30,7 +31,7 @@ final class RepositoriesRepo: RepositoriesRepoProtocol {
     
     // get all public repositories
     func getPublicRepositories() {
-        RepositoryApi.PublicRepositories.request(model: [RepositoryResponse].self) { [weak self] result in
+        RepositoryApi.publicRepositories.request(model: [RepositoryResponse].self) { [weak self] result in
             guard let self = self else { return }
             switch result {
                 
@@ -47,6 +48,10 @@ final class RepositoriesRepo: RepositoriesRepoProtocol {
     func search(for reposiotryName: String) {
         let searchedItems = localrepo?.search(for: reposiotryName)
         delegate?.didGetSearchedItmes(repositories: searchedItems ?? [])
+    }
+    
+    private func didGetRemoteRepositores(repositories: [Repository]) {
+        
     }
 }
 

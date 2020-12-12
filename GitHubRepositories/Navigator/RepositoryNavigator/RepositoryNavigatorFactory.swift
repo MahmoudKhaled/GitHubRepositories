@@ -16,9 +16,16 @@ final class  RepositoryNavigatorFactory {
         self.navigator = navigator
     }
     
-    func Repositories() -> RepositoriesViewController {
+    func repositories() -> RepositoriesViewController {
         let vc = RepositoriesViewController.instance(.main)
         let viewModel = RepositoriesViewModel(repo: RepositoriesRepo(), navigator: RepositoryNavigator(vc))
+        vc.setViewModel(viewModel)
+        return vc
+    }
+    
+    func repositoryDetails(fullName: String) -> RepositoryDetailsViewController {
+        let vc = RepositoryDetailsViewController.instance(.main)
+        let viewModel = RepositoryDetailsViewModel(repositoryFullName: fullName, repo: RepositoryDetailsRepo())
         vc.setViewModel(viewModel)
         return vc
     }

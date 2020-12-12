@@ -10,6 +10,7 @@ import Foundation
 
 enum RepositoryDestination {
     case repositories
+    case repositoriesDetails(fullName: String)
 }
 
 protocol RepositoryNavigatorProtocol: class {
@@ -24,7 +25,9 @@ final class RepositoryNavigator: BaseNavigator, RepositoryNavigatorProtocol {
         switch destination {
             
         case .repositories:
-            controller.push(factory.Repositories())
+            controller.push(factory.repositories())
+        case .repositoriesDetails(let fullName):
+            controller.push(factory.repositoryDetails(fullName: fullName))
         }
     }
     

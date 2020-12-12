@@ -54,5 +54,86 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="86.383928571428569"/>
         </scene>
+        <!--Repository Details View Controller-->
+        <scene sceneID="kNR-vz-8er">
+            <objects>
+                <viewController storyboardIdentifier="RepositoryDetailsViewController" id="Irm-BG-loK" customClass="RepositoryDetailsViewController" customModule="GitHubRepositories" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Omk-c6-pyB" customClass="RepositoryDetailsView" customModule="GitHubRepositories" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ffa-in-bbK" customClass="BaseImageView" customModule="GitHubRepositories" customModuleProvider="target">
+                                <rect key="frame" x="20" y="44" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="EmZ-jg-z4c"/>
+                                    <constraint firstAttribute="width" constant="40" id="jLH-pJ-fPd"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="repo owner name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GER-tw-cp6">
+                                <rect key="frame" x="70" y="55.5" width="334" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Yml-RC-beY">
+                                <rect key="frame" x="20" y="92" width="384" height="56.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="repo name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bsF-bo-GOn">
+                                        <rect key="frame" x="0.0" y="0.0" width="119" height="29"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="slP-F3-9EP">
+                                        <rect key="frame" x="0.0" y="37" width="39.5" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ykx-5w-HWc">
+                                <rect key="frame" x="0.0" y="156.5" width="414" height="705.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <inset key="separatorInset" minX="40" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Ffa-in-bbK" firstAttribute="leading" secondItem="vhF-XF-9G8" secondAttribute="leading" constant="20" id="CTj-gf-kbT"/>
+                            <constraint firstItem="Ffa-in-bbK" firstAttribute="top" secondItem="vhF-XF-9G8" secondAttribute="top" id="JlK-QZ-JeT"/>
+                            <constraint firstItem="Yml-RC-beY" firstAttribute="leading" secondItem="vhF-XF-9G8" secondAttribute="leading" constant="20" id="QlY-AN-uqv"/>
+                            <constraint firstItem="GER-tw-cp6" firstAttribute="leading" secondItem="Ffa-in-bbK" secondAttribute="trailing" constant="10" id="R0h-Ky-2Tb"/>
+                            <constraint firstItem="Ykx-5w-HWc" firstAttribute="top" secondItem="Yml-RC-beY" secondAttribute="bottom" constant="8" id="TGH-8u-NKC"/>
+                            <constraint firstItem="GER-tw-cp6" firstAttribute="centerY" secondItem="Ffa-in-bbK" secondAttribute="centerY" id="V2w-pX-oUk"/>
+                            <constraint firstItem="Ykx-5w-HWc" firstAttribute="leading" secondItem="vhF-XF-9G8" secondAttribute="leading" id="WT6-q0-pMd"/>
+                            <constraint firstItem="Ykx-5w-HWc" firstAttribute="trailing" secondItem="vhF-XF-9G8" secondAttribute="trailing" id="aW2-Uk-mGg"/>
+                            <constraint firstItem="Yml-RC-beY" firstAttribute="top" secondItem="Ffa-in-bbK" secondAttribute="bottom" constant="8" id="ifJ-5g-E6C"/>
+                            <constraint firstItem="Ykx-5w-HWc" firstAttribute="bottom" secondItem="vhF-XF-9G8" secondAttribute="bottom" id="n4R-ss-tdZ"/>
+                            <constraint firstItem="vhF-XF-9G8" firstAttribute="trailing" secondItem="Yml-RC-beY" secondAttribute="trailing" constant="10" id="xrs-lX-uyJ"/>
+                            <constraint firstItem="vhF-XF-9G8" firstAttribute="trailing" secondItem="GER-tw-cp6" secondAttribute="trailing" constant="10" id="zKs-xq-XPS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vhF-XF-9G8"/>
+                        <connections>
+                            <outlet property="detailsTableView" destination="Ykx-5w-HWc" id="XTQ-ZJ-mY0"/>
+                            <outlet property="repositoryDetailsLabel" destination="slP-F3-9EP" id="cGv-Bi-JW0"/>
+                            <outlet property="repositoryImageView" destination="Ffa-in-bbK" id="ygN-jA-GeN"/>
+                            <outlet property="repositoryNameLabel" destination="bsF-bo-GOn" id="hTu-2d-hIV"/>
+                            <outlet property="repositoryOwnerNameLabel" destination="GER-tw-cp6" id="7Xw-kN-CEi"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="mainView" destination="Omk-c6-pyB" id="cfC-ZN-u2x"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FRU-tz-FC9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="918.84057971014499" y="86.383928571428569"/>
+        </scene>
     </scenes>
 </document>

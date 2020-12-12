@@ -14,6 +14,7 @@ struct EnpointConstants {
     
     //MARK:- Repositories endpoints
     static let publicRepository = "repositories"
+    static let repoDetails = "repos"
 }
 
 
