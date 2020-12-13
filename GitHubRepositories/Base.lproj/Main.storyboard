@@ -136,20 +136,5 @@
             </objects>
             <point key="canvasLocation" x="1722" y="86"/>
         </scene>
-        <!--Custom Navigation Controller-->
-        <scene sceneID="yQG-wq-Hk5">
-            <objects>
-                <navigationController storyboardIdentifier="CustomNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="fot-kC-7Mn" customClass="CustomNavigationController" customModule="GitHubRepositories" customModuleProvider="target" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="O71-Zb-JPb">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="R8G-rN-IqS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="322" y="86"/>
-        </scene>
     </scenes>
 </document>

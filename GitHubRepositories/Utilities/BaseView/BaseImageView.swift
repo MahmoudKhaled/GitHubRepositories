@@ -30,3 +30,12 @@ class BaseImageView: UIImageView {
     }
 }
 
+class RemoteImageView: BaseImageView {
+    var url: URL? {
+        didSet {
+            if oldValue != url {
+                load(url: url)
+            }
+        }
+    }
+}

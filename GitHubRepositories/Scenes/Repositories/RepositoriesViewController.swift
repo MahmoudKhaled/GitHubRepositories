@@ -10,11 +10,11 @@ import UIKit
 
 extension RepositoriesViewController {
     static func create() -> UIViewController {
-        let vc = self.instance(.main)
-        let viewModel = RepositoriesViewModel(repo: RepositoriesRepo(), navigator: RepositoryNavigator(vc))
-        vc.setViewModel(viewModel)
-        vc.title = ScreenTitle.publicRepositories.title
-        return vc
+        let viewController = instance(.main)
+        let viewModel = RepositoriesViewModel(repo: RepositoriesRepo(), navigator: RepositoryNavigator(viewController))
+        viewController.setViewModel(viewModel)
+        viewController.title = ScreenTitle.publicRepositories.title
+        return viewController
     }
 }
 

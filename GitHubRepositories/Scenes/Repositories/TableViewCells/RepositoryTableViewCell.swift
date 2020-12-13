@@ -11,16 +11,15 @@ import UIKit
 class RepositoryTableViewCell: UITableViewCell {
     
     //MARK:- Outlets
-    @IBOutlet weak var repositoryImageView: BaseImageView!
-    @IBOutlet weak var repositoryNameLabel: UILabel!
-    @IBOutlet weak var repositoryOwnerNameLabel: UILabel!
-    @IBOutlet weak var createdAtLabel: UILabel!
+    @IBOutlet private weak var repositoryImageView: RemoteImageView!
+    @IBOutlet private weak var repositoryNameLabel: UILabel!
+    @IBOutlet private weak var repositoryOwnerNameLabel: UILabel!
+    @IBOutlet private weak var createdAtLabel: UILabel!
     
     var repository: Repository? {
         didSet {
             guard let repository = repository else { return }
-//            repositoryImageView.setImage(forURL: repository.owner.avatarImage)
-            repositoryImageView.load(url: repository.owner.avatarImage)
+            repositoryImageView.url = repository.owner.avatarImage
             repositoryNameLabel.text = repository.name
             repositoryOwnerNameLabel.text = repository.owner.name
         }
@@ -28,5 +27,10 @@ class RepositoryTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        repositoryImageView.image = nil
     }
 }

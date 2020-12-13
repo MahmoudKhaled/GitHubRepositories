@@ -13,7 +13,7 @@
 		5772ED352582601C0080AFEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5772ED332582601C0080AFEE /* LaunchScreen.storyboard */; };
 		5772ED43258262870080AFEE /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772ED42258262870080AFEE /* HTTPMethod.swift */; };
 		5772ED45258262CA0080AFEE /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772ED44258262CA0080AFEE /* Result.swift */; };
-		5772ED472582636E0080AFEE /* ResultError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772ED462582636E0080AFEE /* ResultError.swift */; };
+		5772ED472582636E0080AFEE /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772ED462582636E0080AFEE /* AppError.swift */; };
 		5772ED4C258272AF0080AFEE /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772ED4B258272AF0080AFEE /* RequestBuilder.swift */; };
 		5772ED4F258275310080AFEE /* EnpointConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772ED4E258275310080AFEE /* EnpointConstants.swift */; };
 		5772ED522582767E0080AFEE /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772ED512582767E0080AFEE /* RequestProtocol.swift */; };
@@ -24,7 +24,6 @@
 		5772ED6425829ACB0080AFEE /* RepositoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772ED6325829ACB0080AFEE /* RepositoriesViewModel.swift */; };
 		5772ED6625829AED0080AFEE /* RepositryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772ED6525829AED0080AFEE /* RepositryResponse.swift */; };
 		5772ED692582A60E0080AFEE /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772ED682582A60E0080AFEE /* ArrayExtension.swift */; };
-		5772ED6B2582B27C0080AFEE /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772ED6A2582B27C0080AFEE /* Test.swift */; };
 		5772ED71258383BF0080AFEE /* RepositoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772ED6F258383BF0080AFEE /* RepositoryTableViewCell.swift */; };
 		5772ED72258383BF0080AFEE /* RepositoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5772ED70258383BF0080AFEE /* RepositoryTableViewCell.xib */; };
 		5772ED74258383DD0080AFEE /* RepositoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772ED73258383DD0080AFEE /* RepositoriesView.swift */; };
@@ -66,7 +65,7 @@
 		5772ED362582601C0080AFEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5772ED42258262870080AFEE /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		5772ED44258262CA0080AFEE /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
-		5772ED462582636E0080AFEE /* ResultError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultError.swift; sourceTree = "<group>"; };
+		5772ED462582636E0080AFEE /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		5772ED4B258272AF0080AFEE /* RequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
 		5772ED4E258275310080AFEE /* EnpointConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnpointConstants.swift; sourceTree = "<group>"; };
 		5772ED512582767E0080AFEE /* RequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProtocol.swift; sourceTree = "<group>"; };
@@ -77,7 +76,6 @@
 		5772ED6325829ACB0080AFEE /* RepositoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesViewModel.swift; sourceTree = "<group>"; };
 		5772ED6525829AED0080AFEE /* RepositryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositryResponse.swift; sourceTree = "<group>"; };
 		5772ED682582A60E0080AFEE /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
-		5772ED6A2582B27C0080AFEE /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		5772ED6F258383BF0080AFEE /* RepositoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTableViewCell.swift; sourceTree = "<group>"; };
 		5772ED70258383BF0080AFEE /* RepositoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryTableViewCell.xib; sourceTree = "<group>"; };
 		5772ED73258383DD0080AFEE /* RepositoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesView.swift; sourceTree = "<group>"; };
@@ -177,7 +175,6 @@
 			children = (
 				5772ED9D258512700080AFEE /* RepositoryDetails */,
 				5772ED5C258299F70080AFEE /* Repositories */,
-				5772ED6A2582B27C0080AFEE /* Test.swift */,
 				5772EDB62585839A0080AFEE /* BaseViewModel.swift */,
 			);
 			path = Scenes;
@@ -198,7 +195,7 @@
 				5772ED4B258272AF0080AFEE /* RequestBuilder.swift */,
 				5772ED42258262870080AFEE /* HTTPMethod.swift */,
 				5772ED44258262CA0080AFEE /* Result.swift */,
-				5772ED462582636E0080AFEE /* ResultError.swift */,
+				5772ED462582636E0080AFEE /* AppError.swift */,
 				5772ED53258278C80080AFEE /* RequestParsing.swift */,
 				5772ED512582767E0080AFEE /* RequestProtocol.swift */,
 			);
@@ -414,14 +411,13 @@
 				5772ED7A258389E60080AFEE /* Cellabel.swift in Sources */,
 				5772ED972583B4410080AFEE /* TableViewExtension.swift in Sources */,
 				5772ED4C258272AF0080AFEE /* RequestBuilder.swift in Sources */,
-				5772ED6B2582B27C0080AFEE /* Test.swift in Sources */,
 				5772EDB72585839A0080AFEE /* BaseViewModel.swift in Sources */,
 				5772ED4F258275310080AFEE /* EnpointConstants.swift in Sources */,
 				5772ED6225829AB20080AFEE /* RepositoriesRepo.swift in Sources */,
 				5772EDA1258512B50080AFEE /* RepositoryDetailsViewModel.swift in Sources */,
 				5772ED6025829A5F0080AFEE /* RepositoriesViewController.swift in Sources */,
 				5772ED8C25839EB10080AFEE /* RepositoryNavigator.swift in Sources */,
-				5772ED472582636E0080AFEE /* ResultError.swift in Sources */,
+				5772ED472582636E0080AFEE /* AppError.swift in Sources */,
 				5772ED7D25838BFD0080AFEE /* RepositoryApi.swift in Sources */,
 				5772EDB52585826C0080AFEE /* AlertBuilder.swift in Sources */,
 				5772ED9F258512900080AFEE /* RepositoryDetailsViewController.swift in Sources */,

@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class  RepositoryNavigatorFactory {
+final class RepositoryNavigatorFactory {
     
     private unowned let navigator: RepositoryNavigatorProtocol
     

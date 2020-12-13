@@ -27,8 +27,8 @@ protocol RepositoriesRepoDelegate: ErrorStatusProtocol {
 
 final class RepositoriesRepo: RepositoriesRepoProtocol {
     
-    var delegate: RepositoriesRepoDelegate?
-    private var localrepo: LocalRepositoriesRepoProtocol?
+    weak var delegate: RepositoriesRepoDelegate?
+    private var localRepo: LocalRepositoriesRepoProtocol?
     
     // get all public repositories
     func getPublicRepositories(page: Int, perPages: Int) {
@@ -38,7 +38,7 @@ final class RepositoriesRepo: RepositoriesRepoProtocol {
                 
             case .success(let repositoriesResponse):
                 let reposioties = repositoriesResponse.map({Repository($0)})
-                self.localrepo = LocalRepositoriesRepo(reposioties, perPages: perPages)
+                self.localRepo = LocalRepositoriesRepo(reposioties, perPages: perPages)
                 self.didGetRemoteRepositores(page: page)
                 
             case .failure(let error):
@@ -52,13 +52,13 @@ final class RepositoriesRepo: RepositoriesRepoProtocol {
     }
     
     func paginateData(page: Int) {
-        if let data = localrepo?.paginateData(page: page) {
+        if let data = localRepo?.paginateData(page: page) {
           delegate?.didGetRepositoriesData(data: data)
         }
     }
     
     func search(for reposiotryName: String) {
-        let searchedItems = localrepo?.search(for: reposiotryName)
+        let searchedItems = localRepo?.search(for: reposiotryName)
         delegate?.didGetSearchedItmes(repositories: searchedItems ?? [])
     }
 }

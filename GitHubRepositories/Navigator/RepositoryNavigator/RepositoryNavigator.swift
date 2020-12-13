@@ -26,8 +26,8 @@ final class RepositoryNavigator: BaseNavigator, RepositoryNavigatorProtocol {
         case .repositories: break
             
         case .repositoriesDetails(let fullName):
-//            controller.push(factory.repositoryDetails(fullName: fullName))
-            controller.push(RepositoryDetailsViewController.create(fullName: fullName))
+            controller.push(factory.repositoryDetails(fullName: fullName))
+//            controller.push(RepositoryDetailsViewController.create(fullName: fullName))
         }
     }
     
