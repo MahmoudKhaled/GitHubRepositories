@@ -22,11 +22,15 @@ protocol RepositoriesViewModelProtocol: BaseViewModelProtocol {
 final class RepositoriesViewModel: BaseViewModel {
     
     var repositories: Boxing<[Repository]> = Boxing([])
-
-    private var repo: RepositoriesRepoProtocol
-    private var navigator: RepositoryNavigatorProtocol
+    
+    private var searchedRepositories: [Repository] = []
+    private var publicRepositories: [Repository] = []
+    private var isSearchedItems: Bool = false
     private var totalPages: Int = 1
     private var currentPage: Int = 1
+    private var repo: RepositoriesRepoProtocol
+    private var navigator: RepositoryNavigatorProtocol
+    
     
     init(repo: RepositoriesRepoProtocol, navigator: RepositoryNavigatorProtocol) {
         self.repo = repo
@@ -43,7 +47,7 @@ extension RepositoriesViewModel: RepositoriesViewModelProtocol {
     }
 
     func getReposotries() {
-        repo.getPublicRepositories(page: currentPage, perPage: 9)
+        repo.getPublicRepositories(page: currentPage, perPages: 10)
     }
     
     func getRepositoryItem(at indexPath: IndexPath) -> Repository {
@@ -51,7 +55,17 @@ extension RepositoriesViewModel: RepositoriesViewModelProtocol {
     }
     
     func searchByRepositoryName(name: String) {
-        repo.search(for: name)
+
+        // to prevent search pagination
+        if !name.isEmpty, name.count >= 2 {
+            repo.search(for: name)
+            isSearchedItems = true
+        } else {
+            isSearchedItems = false
+            repositories.value = publicRepositories
+        }
+    
+//        repo.search(for: name)
     }
     
     func didSelectRepository(at indexPath: IndexPath) {
@@ -60,6 +74,7 @@ extension RepositoriesViewModel: RepositoriesViewModelProtocol {
     }
     
     func loadNextPage() {
+        guard !isSearchedItems else { return }
         if currentPage < totalPages {
             currentPage += 1
             print("load page", currentPage)
@@ -71,11 +86,16 @@ extension RepositoriesViewModel: RepositoriesViewModelProtocol {
 extension RepositoriesViewModel: RepositoriesRepoDelegate {
 
     func didGetRepositoriesData(data: RepositoriesData) {
-        repositories.value.append(contentsOf: data.repositories)
+        publicRepositories.append(contentsOf: data.repositories)
+        repositories.value = publicRepositories
         totalPages = data.totalPages
+//        repositories.value.append(contentsOf: data.repositories)
+//        totalPages = data.totalPages
     }
     
     func didGetSearchedItmes(repositories: [Repository]) {
-        self.repositories.value = repositories
+        searchedRepositories = repositories
+        self.repositories.value = searchedRepositories
+//        self.repositories.value = repositories
     }
 }

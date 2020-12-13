@@ -28,9 +28,9 @@ final class LocalRepositoriesRepo: LocalRepositoriesRepoProtocol {
         return Int(total)
     }()
     
-    init(_ repositories: [Repository], perPage: Int) {
+    init(_ repositories: [Repository], perPages: Int) {
         self.repositories = repositories
-        self.perPages = perPage
+        self.perPages = perPages
     }
     
 //    func getRepositories(page: Int, searchKey: String = "") {

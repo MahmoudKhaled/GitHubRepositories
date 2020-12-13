@@ -14,7 +14,7 @@ protocol ErrorStatusProtocol: class {
 
 protocol RepositoriesRepoProtocol: class {
     var delegate: RepositoriesRepoDelegate? { get set }
-    func getPublicRepositories(page: Int, perPage: Int)
+    func getPublicRepositories(page: Int, perPages: Int)
     func search(for reposiotryName: String)
     func paginateData(page: Int)
 }
@@ -31,14 +31,14 @@ final class RepositoriesRepo: RepositoriesRepoProtocol {
     private var localrepo: LocalRepositoriesRepoProtocol?
     
     // get all public repositories
-    func getPublicRepositories(page: Int, perPage: Int) {
+    func getPublicRepositories(page: Int, perPages: Int) {
         RepositoryApi.publicRepositories.request(model: [RepositoryResponse].self) { [weak self] result in
             guard let self = self else { return }
             switch result {
                 
             case .success(let repositoriesResponse):
                 let reposioties = repositoriesResponse.map({Repository($0)})
-                self.localrepo = LocalRepositoriesRepo(reposioties, perPage: perPage)
+                self.localrepo = LocalRepositoriesRepo(reposioties, perPages: perPages)
                 self.didGetRemoteRepositores(page: page)
                 
             case .failure(let error):
