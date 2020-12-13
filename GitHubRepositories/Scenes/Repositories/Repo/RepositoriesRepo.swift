@@ -16,6 +16,7 @@ protocol RepositoriesRepoProtocol: class {
     var delegate: RepositoriesRepoDelegate? { get set }
     func getPublicRepositories()
     func search(for reposiotryName: String)
+    func paginateData(page: Int)
 }
 
 protocol RepositoriesRepoDelegate: ErrorStatusProtocol {
@@ -49,8 +50,13 @@ final class RepositoriesRepo: RepositoriesRepoProtocol {
     private func didGetRemoteRepositores(response: [RepositoryResponse]) {
        let reposioties = response.map({Repository($0)})
         localrepo = LocalRepositoriesRepo(reposioties, perPage: 10)
-        let data = localrepo!.paginateData(page: 1)
-        delegate?.didGetRepositoriesData(data: data)
+        paginateData(page: 1)
+    }
+    
+    func paginateData(page: Int) {
+        if let data = localrepo?.paginateData(page: page) {
+          delegate?.didGetRepositoriesData(data: data)
+        }
     }
     
     func search(for reposiotryName: String) {

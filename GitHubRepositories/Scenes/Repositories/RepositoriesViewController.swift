@@ -71,8 +71,17 @@ extension RepositoriesViewController: UITableViewDataSource, UITableViewDelegate
         return cell
     }
     
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
+        guard let numberOfRows = viewModel?.numberOfRepositoriesRows else  { return }
+        
+        if indexPath.row == numberOfRows - 1 {
+            viewModel?.loadNextPage()
+        }
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 85
+        return 90
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

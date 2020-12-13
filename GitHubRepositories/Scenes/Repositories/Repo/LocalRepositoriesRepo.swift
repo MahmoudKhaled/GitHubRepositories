@@ -58,7 +58,7 @@ final class LocalRepositoriesRepo: LocalRepositoriesRepoProtocol {
         startIndex = (page * perPages) - perPages
         
         if page == totalPages {
-            endIndex = repositories.endIndex
+            endIndex = repositories.count - 1
         } else {
             endIndex = (page * perPages) - 1
         }

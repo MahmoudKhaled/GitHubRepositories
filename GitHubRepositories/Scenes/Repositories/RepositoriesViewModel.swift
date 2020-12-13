@@ -16,6 +16,7 @@ protocol RepositoriesViewModelProtocol: BaseViewModelProtocol {
     func getRepositoryItem(at indexPath: IndexPath) -> Repository
     func searchByRepositoryName(name: String)
     func didSelectRepository(at indexPath: IndexPath)
+    func loadNextPage()
 }
 
 final class RepositoriesViewModel: BaseViewModel {
@@ -56,6 +57,14 @@ extension RepositoriesViewModel: RepositoriesViewModelProtocol {
     func didSelectRepository(at indexPath: IndexPath) {
         let fullName = repositories.value[indexPath.row].fullName
         navigator.navigateTo(.repositoriesDetails(fullName: fullName))
+    }
+    
+    func loadNextPage() {
+        if currentPage < totalPages {
+            currentPage += 1
+            print("load page", currentPage)
+            repo.paginateData(page: currentPage)
+        }
     }
 }
 
