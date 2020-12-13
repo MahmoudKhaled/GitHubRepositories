@@ -17,7 +17,9 @@ extension RequestProtocol where Self: URLRequestProtocol {
     public func request<T>(model: T.Type, completion: @escaping ResponseResult<T>) where T: Codable {
         let task = URLSession.shared.dataTask(with: urlRequst) { (data, urlResponse, error) in
             let parsing = RequstParsing()
-            parsing.handleResponse((data, urlResponse, error), completion: completion)
+            DispatchQueue.main.async {
+                parsing.handleResponse((data, urlResponse, error), completion: completion)
+            }
         }
         task.resume()
     }

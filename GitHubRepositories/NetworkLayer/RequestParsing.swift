@@ -10,12 +10,12 @@ import Foundation
 
 // MARK: - Response
 struct Response {
-    var reponse: HTTPURLResponse?
+    var response: HTTPURLResponse?
     var error: Error?
     var data: Data?
     
     var statusCode: Int {
-        return reponse?.statusCode ?? 500
+        return response?.statusCode ?? 500
     }
 }
 
@@ -31,39 +31,51 @@ open class RequstParsing: NSObject {}
 
 extension RequstParsing: BaseResponseHandler {
     
-    public func handleResponse<T>(_ response: DataResponse, completion: @escaping (ResultStatus<T>) -> Void) where T : Decodable, T : Encodable {
+    public func handleResponse<T>(_ response: DataResponse, completion: @escaping (Result<T, Error>) -> Void) where T : Decodable, T : Encodable {
         
-        let httpURLResponse = response.1 as? HTTPURLResponse
-        let _response = Response(reponse: httpURLResponse, error: response.2, data: response.0)
+        let (data, response, error) = response
         
-        guard let _ = response.0 else {
-            completion(ResultStatus<T>.failure(NoInternetError()))
+        let httpURLResponse = response as? HTTPURLResponse
+        let _response = Response(response: httpURLResponse, error: error, data: data)
+        
+        guard let _data = data else {
+            completion(.failure(AppError.noInternet))
+            return
+        }
+        
+        if let error = error {
+            completion(.failure(error))
             return
         }
         
         switch _response.statusCode {
         case 200:
-            handleSuccess(response, completion: completion)
+            handleSuccess(_data, completion: completion)
         case 400...499:
-            completion(ResultStatus<T>.failure(ValidationError(data: _response.data)))
+            completion(.failure(decodeError(from: _data)))
         case 500:
-            completion(ResultStatus<T>.failure(InternalServerError()))
+            completion(.failure(AppError.internalServerError))
         default:
             break
         }
     }
     
-    private func handleSuccess<T>(_ response: DataResponse, completion: @escaping ResponseResult<T>) where T: Codable {
-        if let json = response.0 {
-            do {
-                let decoder = JSONDecoder()
-                let modules = try decoder.decode(T.self, from: json)
-                completion(ResultStatus<T>.success(modules))
-            } catch {
-                completion(ResultStatus<T>.failure(error))
-            }
-        } else {
-            completion(ResultStatus<T>.failure(response.2))
+    private func handleSuccess<T>(_ data: Data, completion: @escaping ResponseResult<T>) where T: Codable {
+        do {
+            let decoder = JSONDecoder()
+            let modules = try decoder.decode(T.self, from: data)
+            completion(.success(modules))
+        } catch {
+            completion(.failure(error))
+        }
+    }
+    
+    private func decodeError(from data: Data) -> Error {
+        do {
+            let error = try JSONDecoder().decode(ServerError.self, from: data)
+            return AppError.validationError(message: error.message ?? "")
+        } catch {
+            return error
         }
     }
 }

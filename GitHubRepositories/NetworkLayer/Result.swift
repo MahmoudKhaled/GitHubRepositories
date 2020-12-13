@@ -8,9 +8,4 @@
 
 import Foundation
 
-public typealias ResponseResult<T> = (ResultStatus<T>) -> Void
-
-public enum ResultStatus<T> {
-    case success(T)
-    case failure(Error?)
-}
+public typealias ResponseResult<T> = (Result<T, Error>) -> Void
