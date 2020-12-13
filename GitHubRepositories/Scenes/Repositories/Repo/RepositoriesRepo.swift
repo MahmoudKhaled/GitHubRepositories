@@ -20,7 +20,6 @@ protocol RepositoriesRepoProtocol: class {
 }
 
 protocol RepositoriesRepoDelegate: ErrorStatusProtocol {
-//    func didGetPublicRepositories(repositories: [Repository])
     func didGetSearchedItmes(repositories: [Repository])
     func didGetRepositoriesData(data: RepositoriesData)
 }

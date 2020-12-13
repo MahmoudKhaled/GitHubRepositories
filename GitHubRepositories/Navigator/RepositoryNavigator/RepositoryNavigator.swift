@@ -9,7 +9,6 @@
 import UIKit
 
 enum RepositoryDestination {
-    case repositories
     case repositoriesDetails(fullName: String)
 }
 
@@ -18,16 +17,11 @@ protocol RepositoryNavigatorProtocol: class {
 }
 final class RepositoryNavigator: BaseNavigator, RepositoryNavigatorProtocol {
     
-    private lazy var factory = RepositoryNavigatorFactory(navigator: self)
-
     func navigateTo(_ destination: RepositoryDestination) {
         switch destination {
             
-        case .repositories: break
-            
         case .repositoriesDetails(let fullName):
-            controller.push(factory.repositoryDetails(fullName: fullName))
-//            controller.push(RepositoryDetailsViewController.create(fullName: fullName))
+            controller.push(RepositoryDetailsViewController.create(fullName: fullName))
         }
     }
     

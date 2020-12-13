@@ -10,9 +10,9 @@ import UIKit
 
 class RepositoryDetailsTableViewCellTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var detailsIconImageView: BaseImageView!
-    @IBOutlet weak var detailsTitleLabel: UILabel!
-    @IBOutlet weak var detailsValueLabel: UILabel!
+    @IBOutlet private weak var detailsIconImageView: BaseImageView!
+    @IBOutlet private weak var detailsTitleLabel: UILabel!
+    @IBOutlet private weak var detailsValueLabel: UILabel!
     
     var details: RepositoryDetails? {
         didSet {

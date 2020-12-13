@@ -32,23 +32,9 @@ final class LocalRepositoriesRepo: LocalRepositoriesRepoProtocol {
         self.repositories = repositories
         self.perPages = perPages
     }
-    
-//    func getRepositories(page: Int, searchKey: String = "") {
-//        if !searchKey.isEmpty {
-//
-//        }
-//    }
-    
+
     func search(for reposiotryName: String) -> [Repository] {
         
-//        if !reposiotryName.isEmpty, reposiotryName.count >= 2 {
-//            let searchedRepositories = repositories.filter({
-//                $0.name.lowercased().range(of: reposiotryName.lowercased()) != nil
-//            })
-//            return searchedRepositories
-//        } else {
-//            return repositories
-//        }
         let searchedRepositories = repositories.filter({
             $0.name.lowercased().range(of: reposiotryName.lowercased()) != nil
         })
@@ -66,11 +52,11 @@ final class LocalRepositoriesRepo: LocalRepositoriesRepoProtocol {
         } else {
             endIndex = (page * perPages) - 1
         }
-
+        
         let data = repositories[startIndex...endIndex]
         repositoriesData.repositories = Array(data)
         repositoriesData.totalPages = totalPages
         return repositoriesData
     }
-   
+    
 }

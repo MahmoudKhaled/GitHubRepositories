@@ -10,11 +10,11 @@ import UIKit
 
 class RepositoryDetailsView: UIView {
     
-    @IBOutlet weak var repositoryImageView: BaseImageView!
-    @IBOutlet weak var repositoryOwnerNameLabel: UILabel!
-    @IBOutlet weak var repositoryNameLabel: UILabel!
+    @IBOutlet private weak var repositoryImageView: BaseImageView!
+    @IBOutlet private weak var repositoryOwnerNameLabel: UILabel!
+    @IBOutlet private weak var repositoryNameLabel: UILabel!
     @IBOutlet weak var detailsTableView: UITableView!
-    @IBOutlet weak var repositoryDetailsLabel: UILabel!
+    @IBOutlet private weak var repositoryDetailsLabel: UILabel!
     
 
     override func awakeFromNib() {

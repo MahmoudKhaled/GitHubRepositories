@@ -46,10 +46,7 @@ class RepositoriesViewController: UIViewController {
         
         viewModel?.errorMessage.binding { [weak self] message in
             guard let self = self else { return }
-            DispatchQueue.main.async {
-                self.showErrorAlert(with: message)
-            }
-            
+            self.showErrorAlert(with: message)
         }
     }
 }

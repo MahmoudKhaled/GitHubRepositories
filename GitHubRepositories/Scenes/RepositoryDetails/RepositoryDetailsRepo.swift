@@ -19,7 +19,7 @@ protocol RepositoryDetailsRepoDelegate: ErrorStatusProtocol {
 
 final class RepositoryDetailsRepo: RepositoryDetailsRepoProtocol {
     
-    var delegate: RepositoryDetailsRepoDelegate?
+    weak var delegate: RepositoryDetailsRepoDelegate?
     
     func getDetails(repositoryFullName: String) {
         RepositoryApi.repositoryDetails(repositoryFullName).request(model: RepositoryResponse.self) { [weak self] result in

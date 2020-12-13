@@ -55,7 +55,6 @@ extension RepositoriesViewModel: RepositoriesViewModelProtocol {
     }
     
     func searchByRepositoryName(name: String) {
-
         // to prevent search pagination
         if !name.isEmpty, name.count >= 2 {
             repo.search(for: name)
@@ -64,8 +63,6 @@ extension RepositoriesViewModel: RepositoriesViewModelProtocol {
             isSearchedItems = false
             repositories.value = publicRepositories
         }
-    
-//        repo.search(for: name)
     }
     
     func didSelectRepository(at indexPath: IndexPath) {
