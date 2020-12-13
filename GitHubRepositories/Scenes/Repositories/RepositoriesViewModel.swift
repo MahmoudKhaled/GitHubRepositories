@@ -43,7 +43,7 @@ extension RepositoriesViewModel: RepositoriesViewModelProtocol {
     }
 
     func getReposotries() {
-        repo.getPublicRepositories()
+        repo.getPublicRepositories(page: currentPage, perPage: 9)
     }
     
     func getRepositoryItem(at indexPath: IndexPath) -> Repository {
@@ -69,16 +69,13 @@ extension RepositoriesViewModel: RepositoriesViewModelProtocol {
 }
 
 extension RepositoriesViewModel: RepositoriesRepoDelegate {
-    func didGetPublicRepositories(repositories: [Repository]) {
-        self.repositories.value.append(contentsOf: repositories)
+
+    func didGetRepositoriesData(data: RepositoriesData) {
+        repositories.value.append(contentsOf: data.repositories)
+        totalPages = data.totalPages
     }
     
     func didGetSearchedItmes(repositories: [Repository]) {
         self.repositories.value = repositories
-    }
-    
-    func didGetRepositoriesData(data: RepositoriesData) {
-        repositories.value.append(contentsOf: data.repositories)
-        totalPages = data.totalPages
     }
 }
