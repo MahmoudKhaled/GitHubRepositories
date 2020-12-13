@@ -54,6 +54,7 @@
 		5772EDB3258581820080AFEE /* StringExtenion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772EDB2258581820080AFEE /* StringExtenion.swift */; };
 		5772EDB52585826C0080AFEE /* AlertBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772EDB42585826C0080AFEE /* AlertBuilder.swift */; };
 		5772EDB72585839A0080AFEE /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772EDB62585839A0080AFEE /* BaseViewModel.swift */; };
+		57A64F1D25861C320031BEF8 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 57A64F1C25861C320031BEF8 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -106,6 +107,7 @@
 		5772EDB2258581820080AFEE /* StringExtenion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtenion.swift; sourceTree = "<group>"; };
 		5772EDB42585826C0080AFEE /* AlertBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertBuilder.swift; sourceTree = "<group>"; };
 		5772EDB62585839A0080AFEE /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		57A64F1C25861C320031BEF8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 		5772ED1C258260170080AFEE = {
 			isa = PBXGroup;
 			children = (
+				57A64F1C25861C320031BEF8 /* README.md */,
 				5772ED27258260170080AFEE /* GitHubRepositories */,
 				5772ED26258260170080AFEE /* Products */,
 			);
@@ -392,6 +395,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57A64F1D25861C320031BEF8 /* README.md in Resources */,
 				5772ED352582601C0080AFEE /* LaunchScreen.storyboard in Resources */,
 				5772ED322582601C0080AFEE /* Assets.xcassets in Resources */,
 				5772ED30258260170080AFEE /* Main.storyboard in Resources */,
