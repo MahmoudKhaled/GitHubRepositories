@@ -86,13 +86,10 @@ extension RepositoriesViewModel: RepositoriesRepoDelegate {
         publicRepositories.append(contentsOf: data.repositories)
         repositories.value = publicRepositories
         totalPages = data.totalPages
-//        repositories.value.append(contentsOf: data.repositories)
-//        totalPages = data.totalPages
     }
     
     func didGetSearchedItmes(repositories: [Repository]) {
         searchedRepositories = repositories
         self.repositories.value = searchedRepositories
-//        self.repositories.value = repositories
     }
 }

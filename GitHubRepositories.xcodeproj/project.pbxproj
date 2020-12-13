@@ -23,7 +23,6 @@
 		5772ED6225829AB20080AFEE /* RepositoriesRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772ED6125829AB20080AFEE /* RepositoriesRepo.swift */; };
 		5772ED6425829ACB0080AFEE /* RepositoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772ED6325829ACB0080AFEE /* RepositoriesViewModel.swift */; };
 		5772ED6625829AED0080AFEE /* RepositryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772ED6525829AED0080AFEE /* RepositryResponse.swift */; };
-		5772ED692582A60E0080AFEE /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772ED682582A60E0080AFEE /* ArrayExtension.swift */; };
 		5772ED71258383BF0080AFEE /* RepositoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772ED6F258383BF0080AFEE /* RepositoryTableViewCell.swift */; };
 		5772ED72258383BF0080AFEE /* RepositoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5772ED70258383BF0080AFEE /* RepositoryTableViewCell.xib */; };
 		5772ED74258383DD0080AFEE /* RepositoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772ED73258383DD0080AFEE /* RepositoriesView.swift */; };
@@ -37,7 +36,6 @@
 		5772ED8825839AE20080AFEE /* ViewControllerExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772ED8725839AE20080AFEE /* ViewControllerExtention.swift */; };
 		5772ED8A25839CFF0080AFEE /* BaseNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772ED8925839CFF0080AFEE /* BaseNavigator.swift */; };
 		5772ED8C25839EB10080AFEE /* RepositoryNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772ED8B25839EB10080AFEE /* RepositoryNavigator.swift */; };
-		5772ED8E25839F100080AFEE /* RepositoryNavigatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772ED8D25839F100080AFEE /* RepositoryNavigatorFactory.swift */; };
 		5772ED932583A9C80080AFEE /* CustomeNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772ED922583A9C80080AFEE /* CustomeNavigationController.swift */; };
 		5772ED952583ADFB0080AFEE /* AppNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772ED942583ADFB0080AFEE /* AppNavigator.swift */; };
 		5772ED972583B4410080AFEE /* TableViewExtenion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772ED962583B4410080AFEE /* TableViewExtenion.swift */; };
@@ -76,7 +74,6 @@
 		5772ED6125829AB20080AFEE /* RepositoriesRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesRepo.swift; sourceTree = "<group>"; };
 		5772ED6325829ACB0080AFEE /* RepositoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesViewModel.swift; sourceTree = "<group>"; };
 		5772ED6525829AED0080AFEE /* RepositryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositryResponse.swift; sourceTree = "<group>"; };
-		5772ED682582A60E0080AFEE /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
 		5772ED6F258383BF0080AFEE /* RepositoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTableViewCell.swift; sourceTree = "<group>"; };
 		5772ED70258383BF0080AFEE /* RepositoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryTableViewCell.xib; sourceTree = "<group>"; };
 		5772ED73258383DD0080AFEE /* RepositoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesView.swift; sourceTree = "<group>"; };
@@ -90,7 +87,6 @@
 		5772ED8725839AE20080AFEE /* ViewControllerExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtention.swift; sourceTree = "<group>"; };
 		5772ED8925839CFF0080AFEE /* BaseNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigator.swift; sourceTree = "<group>"; };
 		5772ED8B25839EB10080AFEE /* RepositoryNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryNavigator.swift; sourceTree = "<group>"; };
-		5772ED8D25839F100080AFEE /* RepositoryNavigatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryNavigatorFactory.swift; sourceTree = "<group>"; };
 		5772ED922583A9C80080AFEE /* CustomeNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomeNavigationController.swift; sourceTree = "<group>"; };
 		5772ED942583ADFB0080AFEE /* AppNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigator.swift; sourceTree = "<group>"; };
 		5772ED962583B4410080AFEE /* TableViewExtenion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewExtenion.swift; sourceTree = "<group>"; };
@@ -245,7 +241,6 @@
 		5772ED672582A5EF0080AFEE /* Extentions */ = {
 			isa = PBXGroup;
 			children = (
-				5772ED682582A60E0080AFEE /* ArrayExtension.swift */,
 				5772ED79258389E60080AFEE /* Cellabel.swift */,
 				5772ED8025838D2B0080AFEE /* ImageViewExtention.swift */,
 				5772ED8725839AE20080AFEE /* ViewControllerExtention.swift */,
@@ -294,7 +289,6 @@
 			isa = PBXGroup;
 			children = (
 				5772ED8B25839EB10080AFEE /* RepositoryNavigator.swift */,
-				5772ED8D25839F100080AFEE /* RepositoryNavigatorFactory.swift */,
 			);
 			path = RepositoryNavigator;
 			sourceTree = "<group>";
@@ -427,7 +421,6 @@
 				5772ED9F258512900080AFEE /* RepositoryDetailsViewController.swift in Sources */,
 				5772ED8325838E8C0080AFEE /* Repository.swift in Sources */,
 				5772ED8825839AE20080AFEE /* ViewControllerExtention.swift in Sources */,
-				5772ED8E25839F100080AFEE /* RepositoryNavigatorFactory.swift in Sources */,
 				5772ED78258385A50080AFEE /* BaseImageView.swift in Sources */,
 				5772ED54258278C80080AFEE /* RequestParsing.swift in Sources */,
 				5772ED6625829AED0080AFEE /* RepositryResponse.swift in Sources */,
@@ -445,7 +438,6 @@
 				5772EDB125857CF90080AFEE /* ScreenTitle.swift in Sources */,
 				5772ED8525838EF70080AFEE /* RepositoryOwner.swift in Sources */,
 				5772ED74258383DD0080AFEE /* RepositoriesView.swift in Sources */,
-				5772ED692582A60E0080AFEE /* ArrayExtension.swift in Sources */,
 				5772ED45258262CA0080AFEE /* Result.swift in Sources */,
 				5772ED43258262870080AFEE /* HTTPMethod.swift in Sources */,
 				5772EDAE25851C2F0080AFEE /* RepositoryDetails.swift in Sources */,
