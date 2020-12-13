@@ -68,13 +68,8 @@ extension RepositoriesViewModel: RepositoriesRepoDelegate {
         self.repositories.value = repositories
     }
     
-//    func showError(error: Error?) {
-//        errorMessage.value = error?.localizedDescription ?? ""
-//    }
-    
     func didGetRepositoriesData(data: RepositoriesData) {
-        self.repositories.value.append(contentsOf: data.repositories)
-        self.totalPages = data.totalPages
-        self.currentPage = 1
+        repositories.value.append(contentsOf: data.repositories)
+        totalPages = data.totalPages
     }
 }

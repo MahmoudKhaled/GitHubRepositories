@@ -43,7 +43,6 @@ extension RepositoryDetailsViewModel: RepositoryDetailsViewModelProtocol {
     func getDetailsItem(at indexPath: IndexPath) -> RepositoryDetails {
         return detailsData.value[indexPath.row]
     }
-    
 }
 
 extension RepositoryDetailsViewModel: RepositoryDetailsRepoDelegate {
@@ -51,10 +50,4 @@ extension RepositoryDetailsViewModel: RepositoryDetailsRepoDelegate {
         repository.value = repositoryDetails
         detailsData.value = repositoryDetails.detailsData
     }
-    
-//    func showError(error: Error?) {
-//        
-//    }
-    
-    
 }

@@ -36,22 +36,26 @@ final class RepositoriesRepo: RepositoriesRepoProtocol {
             switch result {
                 
             case .success(let repositoriesResponse):
-                let reposioties = repositoriesResponse.map({Repository($0)})
-                self.delegate?.didGetPublicRepositories(repositories: reposioties)
-                self.localrepo = LocalRepositoriesRepo(reposioties)
+//                let reposioties = repositoriesResponse.map({Repository($0)})
+//                self.delegate?.didGetPublicRepositories(repositories: reposioties)
+//                self.localrepo = LocalRepositoriesRepo(reposioties, perPage: 10)
+                self.didGetRemoteRepositores(response: repositoriesResponse)
             case .failure(let error):
                 self.delegate?.showError(error: error)
             }
         }
     }
     
+    private func didGetRemoteRepositores(response: [RepositoryResponse]) {
+       let reposioties = response.map({Repository($0)})
+        localrepo = LocalRepositoriesRepo(reposioties, perPage: 10)
+        let data = localrepo!.paginateData(page: 1)
+        delegate?.didGetRepositoriesData(data: data)
+    }
+    
     func search(for reposiotryName: String) {
         let searchedItems = localrepo?.search(for: reposiotryName)
         delegate?.didGetSearchedItmes(repositories: searchedItems ?? [])
-    }
-    
-    private func didGetRemoteRepositores(repositories: [Repository]) {
-        
     }
 }
 

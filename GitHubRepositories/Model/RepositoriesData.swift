@@ -9,17 +9,8 @@
 import Foundation
 
 struct RepositoriesData {
-    let perPages: Int
+
     var repositories: [Repository] = []
-    
-    var totalPages: Int {
-        let count = Double(repositories.count)
-        let _perPages = Double(perPages)
-        let total = ceil(count/_perPages)
-        return Int(total)
-    }
-    
-    init(perPages: Int) {
-        self.perPages = perPages
-    }
+    var totalPages: Int = 0
+
 }
