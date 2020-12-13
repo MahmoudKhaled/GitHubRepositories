@@ -41,14 +41,18 @@ final class LocalRepositoriesRepo: LocalRepositoriesRepoProtocol {
     
     func search(for reposiotryName: String) -> [Repository] {
         
-        if !reposiotryName.isEmpty, reposiotryName.count >= 2 {
-            let searchedRepositories = repositories.filter({
-                $0.name.lowercased().range(of: reposiotryName.lowercased()) != nil
-            })
-            return searchedRepositories
-        } else {
-            return repositories
-        }
+//        if !reposiotryName.isEmpty, reposiotryName.count >= 2 {
+//            let searchedRepositories = repositories.filter({
+//                $0.name.lowercased().range(of: reposiotryName.lowercased()) != nil
+//            })
+//            return searchedRepositories
+//        } else {
+//            return repositories
+//        }
+        let searchedRepositories = repositories.filter({
+            $0.name.lowercased().range(of: reposiotryName.lowercased()) != nil
+        })
+        return searchedRepositories
     }
     
     func paginateData(page: Int) -> RepositoriesData {
