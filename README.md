@@ -1,11 +1,3 @@
-//
-//  README.md
-//  GitHubRepositories
-//
-//  Created by Mahmoud Khaled on 12/13/20.
-//  Copyright © 2020 Mahmoud Khaled. All rights reserved.
-//
-
 ## Building and running the project (requirements).
 * Swift 5.0
 * Xcode 11.3.1+
