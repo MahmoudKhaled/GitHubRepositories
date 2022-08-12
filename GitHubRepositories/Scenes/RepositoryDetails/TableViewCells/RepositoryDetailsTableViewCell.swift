@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RepositoryDetailsTableViewCellTableViewCell: UITableViewCell {
+class RepositoryDetailsTableViewCell: UITableViewCell {
     
     @IBOutlet private weak var detailsIconImageView: BaseImageView!
     @IBOutlet private weak var detailsTitleLabel: UILabel!

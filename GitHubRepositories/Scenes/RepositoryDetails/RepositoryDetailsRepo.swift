@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol RepositoryDetailsRepoProtocol: class {
+protocol RepositoryDetailsRepoProtocol: AnyObject {
     var delegate: RepositoryDetailsRepoDelegate? { get set }
     func getDetails(repositoryFullName: String)
 }

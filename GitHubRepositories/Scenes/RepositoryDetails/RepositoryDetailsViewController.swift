@@ -69,7 +69,7 @@ extension RepositoryDetailsViewController: UITableViewDataSource, UITableViewDel
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = RepositoryDetailsTableViewCellTableViewCell.instance(tableView, identifier: RepositoryDetailsTableViewCellTableViewCell.identifier)
+        let cell = RepositoryDetailsTableViewCell.instance(tableView, identifier: RepositoryDetailsTableViewCell.identifier)
         cell.details = viewModel?.getDetailsItem(at: indexPath)
         return cell
     }

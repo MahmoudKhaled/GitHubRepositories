@@ -12,7 +12,7 @@ protocol ErrorStatusProtocol: class {
     func showError(error: Error?)
 }
 
-protocol RepositoriesRepoProtocol: class {
+protocol RepositoriesRepoProtocol: AnyObject {
     var delegate: RepositoriesRepoDelegate? { get set }
     func getPublicRepositories(page: Int, perPages: Int)
     func search(for reposiotryName: String)

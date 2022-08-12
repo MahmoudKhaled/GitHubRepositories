@@ -45,8 +45,8 @@
 		5772EDA1258512B50080AFEE /* RepositoryDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772EDA0258512B50080AFEE /* RepositoryDetailsViewModel.swift */; };
 		5772EDA3258512C40080AFEE /* RepositoryDetailsRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772EDA2258512C40080AFEE /* RepositoryDetailsRepo.swift */; };
 		5772EDA52585182E0080AFEE /* RepositoryDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772EDA42585182E0080AFEE /* RepositoryDetailsView.swift */; };
-		5772EDAB2585195E0080AFEE /* RepositoryDetailsTableViewCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772EDA92585195E0080AFEE /* RepositoryDetailsTableViewCellTableViewCell.swift */; };
-		5772EDAC2585195E0080AFEE /* RepositoryDetailsTableViewCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5772EDAA2585195E0080AFEE /* RepositoryDetailsTableViewCellTableViewCell.xib */; };
+		5772EDAB2585195E0080AFEE /* RepositoryDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772EDA92585195E0080AFEE /* RepositoryDetailsTableViewCell.swift */; };
+		5772EDAC2585195E0080AFEE /* RepositoryDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5772EDAA2585195E0080AFEE /* RepositoryDetailsTableViewCell.xib */; };
 		5772EDAE25851C2F0080AFEE /* RepositoryDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772EDAD25851C2F0080AFEE /* RepositoryDetails.swift */; };
 		5772EDB125857CF90080AFEE /* ScreenTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772EDB025857CF90080AFEE /* ScreenTitle.swift */; };
 		5772EDB3258581820080AFEE /* StringExtenion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772EDB2258581820080AFEE /* StringExtenion.swift */; };
@@ -96,8 +96,8 @@
 		5772EDA0258512B50080AFEE /* RepositoryDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailsViewModel.swift; sourceTree = "<group>"; };
 		5772EDA2258512C40080AFEE /* RepositoryDetailsRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailsRepo.swift; sourceTree = "<group>"; };
 		5772EDA42585182E0080AFEE /* RepositoryDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailsView.swift; sourceTree = "<group>"; };
-		5772EDA92585195E0080AFEE /* RepositoryDetailsTableViewCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailsTableViewCellTableViewCell.swift; sourceTree = "<group>"; };
-		5772EDAA2585195E0080AFEE /* RepositoryDetailsTableViewCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryDetailsTableViewCellTableViewCell.xib; sourceTree = "<group>"; };
+		5772EDA92585195E0080AFEE /* RepositoryDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailsTableViewCell.swift; sourceTree = "<group>"; };
+		5772EDAA2585195E0080AFEE /* RepositoryDetailsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryDetailsTableViewCell.xib; sourceTree = "<group>"; };
 		5772EDAD25851C2F0080AFEE /* RepositoryDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetails.swift; sourceTree = "<group>"; };
 		5772EDB025857CF90080AFEE /* ScreenTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTitle.swift; sourceTree = "<group>"; };
 		5772EDB2258581820080AFEE /* StringExtenion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtenion.swift; sourceTree = "<group>"; };
@@ -317,8 +317,8 @@
 		5772EDA62585191B0080AFEE /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
-				5772EDA92585195E0080AFEE /* RepositoryDetailsTableViewCellTableViewCell.swift */,
-				5772EDAA2585195E0080AFEE /* RepositoryDetailsTableViewCellTableViewCell.xib */,
+				5772EDA92585195E0080AFEE /* RepositoryDetailsTableViewCell.swift */,
+				5772EDAA2585195E0080AFEE /* RepositoryDetailsTableViewCell.xib */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -393,7 +393,7 @@
 				5772ED352582601C0080AFEE /* LaunchScreen.storyboard in Resources */,
 				5772ED322582601C0080AFEE /* Assets.xcassets in Resources */,
 				5772ED30258260170080AFEE /* Main.storyboard in Resources */,
-				5772EDAC2585195E0080AFEE /* RepositoryDetailsTableViewCellTableViewCell.xib in Resources */,
+				5772EDAC2585195E0080AFEE /* RepositoryDetailsTableViewCell.xib in Resources */,
 				5772ED72258383BF0080AFEE /* RepositoryTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -443,7 +443,7 @@
 				5772EDAE25851C2F0080AFEE /* RepositoryDetails.swift in Sources */,
 				5772EDB3258581820080AFEE /* StringExtenion.swift in Sources */,
 				5772ED9A2583C6F10080AFEE /* LocalRepositoriesRepo.swift in Sources */,
-				5772EDAB2585195E0080AFEE /* RepositoryDetailsTableViewCellTableViewCell.swift in Sources */,
+				5772EDAB2585195E0080AFEE /* RepositoryDetailsTableViewCell.swift in Sources */,
 				5772ED9C2583E0410080AFEE /* RepositoriesData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -590,12 +590,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "$(SRCROOT)/GitHubRepositories/Configuration/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = robustastudio.com.GitHubRepositories;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -609,12 +609,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "$(SRCROOT)/GitHubRepositories/Configuration/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = robustastudio.com.GitHubRepositories;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

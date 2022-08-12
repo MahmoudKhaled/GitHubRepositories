@@ -24,7 +24,7 @@ class RepositoryDetailsView: UIView {
     }
     
     private func registerRespositoryCell() {
-        detailsTableView.register(RepositoryDetailsTableViewCellTableViewCell.nib, forCellReuseIdentifier: RepositoryDetailsTableViewCellTableViewCell.identifier)
+        detailsTableView.register(RepositoryDetailsTableViewCell.nib, forCellReuseIdentifier: RepositoryDetailsTableViewCell.identifier)
     }
     
     func setRepositoryData(repository: Repository) {

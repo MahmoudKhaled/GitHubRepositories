@@ -39,9 +39,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func setRootViewController(_ viewController: UIViewController, animated: Bool) {
-        window?.subviews.forEach {
-            $0.removeFromSuperview()
-        }
         if animated {
             let transition = UIView.AnimationOptions.transitionCrossDissolve
             window?.rootViewController = viewController

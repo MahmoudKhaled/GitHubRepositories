@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="7aZ-b6-P85">
-                                <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="51"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <scopeButtonTitles>
                                     <string>Title</string>
@@ -25,12 +26,13 @@
                                 </scopeButtonTitles>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Y30-p0-dwK">
-                                <rect key="frame" x="0.0" y="100" width="414" height="762"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <rect key="frame" x="0.0" y="95" width="414" height="767"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="7aZ-b6-P85" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="5g0-v0-12w"/>
                             <constraint firstItem="Y30-p0-dwK" firstAttribute="top" secondItem="7aZ-b6-P85" secondAttribute="bottom" id="83s-gS-ZFq"/>
@@ -40,7 +42,6 @@
                             <constraint firstItem="Y30-p0-dwK" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="udC-G4-cug"/>
                             <constraint firstItem="7aZ-b6-P85" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wPi-VK-dGC"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <connections>
                             <outlet property="repositoriesTableView" destination="Y30-p0-dwK" id="31j-B0-DnE"/>
                             <outlet property="searchBar" destination="7aZ-b6-P85" id="5hG-Rl-TwB"/>
@@ -100,11 +101,12 @@
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ykx-5w-HWc">
                                 <rect key="frame" x="0.0" y="180" width="414" height="682"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <inset key="separatorInset" minX="40" minY="0.0" maxX="0.0" maxY="0.0"/>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="vhF-XF-9G8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Ffa-in-bbK" firstAttribute="leading" secondItem="vhF-XF-9G8" secondAttribute="leading" constant="20" id="CTj-gf-kbT"/>
                             <constraint firstItem="Ffa-in-bbK" firstAttribute="top" secondItem="vhF-XF-9G8" secondAttribute="top" constant="10" id="JlK-QZ-JeT"/>
@@ -119,7 +121,6 @@
                             <constraint firstItem="vhF-XF-9G8" firstAttribute="trailing" secondItem="Yml-RC-beY" secondAttribute="trailing" constant="10" id="xrs-lX-uyJ"/>
                             <constraint firstItem="vhF-XF-9G8" firstAttribute="trailing" secondItem="GER-tw-cp6" secondAttribute="trailing" constant="10" id="zKs-xq-XPS"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="vhF-XF-9G8"/>
                         <connections>
                             <outlet property="detailsTableView" destination="Ykx-5w-HWc" id="H21-X8-fgh"/>
                             <outlet property="repositoryDetailsLabel" destination="slP-F3-9EP" id="zN6-Ul-az2"/>
@@ -137,4 +138,9 @@
             <point key="canvasLocation" x="1722" y="86"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
